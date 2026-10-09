@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>従業員登録 | らくらくシフト登録</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="menu.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト</a>
+    <a class="nav" href="menu.html">メニュー</a><div class="grp">従業員管理</div><a class="nav" href="employee-list.html">従業員一覧（変更・削除）</a><a class="nav on" href="employee-new.html">従業員登録</a><a class="nav" href="employee-import.html">CSV取込</a><div class="grp">シフト作成</div><a class="nav" href="conditions.html">勤務条件設定</a><a class="nav" href="shift-generate.html">シフト自動作成</a><a class="nav" href="reminder-log.html">出勤催促メール結果</a><a class="nav" href="allowance.html">催促加算の承認</a><div class="grp">シフト管理</div><a class="nav" href="shift-view.html">シフト確認</a><a class="nav" href="shift-edit.html">シフト修正</a><a class="nav" href="shift-confirm.html">シフト確定</a><a class="nav" href="shift-export.html">シフト表出力</a>
+    <div class="who"><b>木戸 愛翔 さん</b>管理者<br><a href="../login.html#loggedout">ログアウト</a></div>
+  </aside>
+  <main class="main">
+    <div class="crumb"><span class="uc">UC 従業員登録</span><a href="menu.html">メニュー</a></div>
+    <div class="head">
+      <div><h1>従業員登録</h1><p class="sub">新しい従業員の情報を登録します</p></div>
+      <div class="actions"></div>
+    </div>
+
+<div class="alt note ng" id="err-required" role="alert">必須項目が未入力です：氏名、フリガナ、メールアドレス、初期パスワード</div>
+
+<div class="alt note ng" id="err-invalid" role="alert">入力内容に誤りがあります：メールアドレスの形式が正しくありません／このメールアドレスはすでに登録されています</div>
+
+
+<fieldset>
+  <legend>基本情報</legend>
+  <div class="form-grid">
+    <div class="field"><label for="n1">氏名<span class="req">必須</span></label><input id="n1" type="text" value=""></div>
+    <div class="field"><label for="n2">フリガナ<span class="req">必須</span></label><input id="n2" type="text" value=""></div>
+    <div class="field"><label for="n3">区分<span class="req">必須</span></label><select id="n3"><option >社員</option><option >アルバイト</option></select></div>
+    <div class="field"><label for="n4">入社日</label><input id="n4" type="date" value=""></div>
+    <div class="field"><label for="n5">メールアドレス<span class="req">必須</span></label><input id="n5" type="email" value=""><div class="hint">ログインと、出勤催促メールの送信先に使います。</div></div>
+    <div class="field"><label for="n6">初期パスワード<span class="req">必須</span></label><input id="n6" type="password"><div class="hint">登録後は画面に表示されません。</div></div>
+  </div>
+</fieldset>
+<fieldset>
+  <legend>スキル・資格</legend>
+  <div class="opts"><label><input type="checkbox" > レジ</label><label><input type="checkbox" > 調理</label><label><input type="checkbox" > リーダー</label><label><input type="checkbox" > サブリーダー</label><label><input type="checkbox" > 食品衛生責任者</label></div>
+</fieldset>
+<fieldset>
+  <legend>勤務条件</legend>
+  <div class="field" style="margin-bottom:16px"><span class="lbl">勤務できる曜日・時間帯</span>
+    <table class="avail" style="max-width:560px"><thead><tr><th></th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th></tr></thead><tbody><tr><td>早番<br><small class="muted">9:00–17:00</small></td><td><label class="chk"><input type="checkbox"  aria-label="月曜 早番"><span></span></label></td><td><label class="chk"><input type="checkbox"  aria-label="火曜 早番"><span></span></label></td><td><label class="chk"><input type="checkbox"  aria-label="水曜 早番"><span></span></label></td><td><label class="chk"><input type="checkbox"  aria-label="木曜 早番"><span></span></label></td><td><label class="chk"><input type="checkbox"  aria-label="金曜 早番"><span></span></label></td><td><label class="chk"><input type="checkbox"  aria-label="土曜 早番"><span></span></label></td><td><label class="chk"><input type="checkbox"  aria-label="日曜 早番"><span></span></label></td></tr><tr><td>遅番<br><small class="muted">14:00–22:00</small></td><td><label class="chk"><input type="checkbox"  aria-label="月曜 遅番"><span></span></label></td><td><label class="chk"><input type="checkbox"  aria-label="火曜 遅番"><span></span></label></td><td><label class="chk"><input type="checkbox"  aria-label="水曜 遅番"><span></span></label></td><td><label class="chk"><input type="checkbox"  aria-label="木曜 遅番"><span></span></label></td><td><label class="chk"><input type="checkbox"  aria-label="金曜 遅番"><span></span></label></td><td><label class="chk"><input type="checkbox"  aria-label="土曜 遅番"><span></span></label></td><td><label class="chk"><input type="checkbox"  aria-label="日曜 遅番"><span></span></label></td></tr></tbody></table></div>
+  <div class="inline">勤務上限：週 <input type="number" value="" aria-label="週の上限日数"> 日　月 <input type="number" value="" aria-label="月の上限時間"> 時間</div>
+</fieldset>
+<div class="form-actions"><a class="btn" href="employee-list.html">キャンセル</a><a class="btn primary" href="employee-registered.html">登録する</a></div>
+<div class="protonote no-print"><b>代替フローの表示確認（プロトタイプ用）</b><br><a href="#err-required">必須項目の未入力</a><a href="#err-invalid">入力内容の誤り</a><br><a href="#" style="margin-top:4px;display:inline-block">表示を閉じる</a></div>
+
+  </main>
+</div>
+</body>
+</html>

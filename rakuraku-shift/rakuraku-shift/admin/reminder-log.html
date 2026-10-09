@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>出勤催促メールの送信結果 | らくらくシフト登録</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="menu.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト</a>
+    <a class="nav" href="menu.html">メニュー</a><div class="grp">従業員管理</div><a class="nav" href="employee-list.html">従業員一覧（変更・削除）</a><a class="nav" href="employee-new.html">従業員登録</a><a class="nav" href="employee-import.html">CSV取込</a><div class="grp">シフト作成</div><a class="nav" href="conditions.html">勤務条件設定</a><a class="nav" href="shift-generate.html">シフト自動作成</a><a class="nav on" href="reminder-log.html">出勤催促メール結果</a><a class="nav" href="allowance.html">催促加算の承認</a><div class="grp">シフト管理</div><a class="nav" href="shift-view.html">シフト確認</a><a class="nav" href="shift-edit.html">シフト修正</a><a class="nav" href="shift-confirm.html">シフト確定</a><a class="nav" href="shift-export.html">シフト表出力</a>
+    <div class="who"><b>木戸 愛翔 さん</b>管理者<br><a href="../login.html#loggedout">ログアウト</a></div>
+  </aside>
+  <main class="main">
+    <div class="crumb"><span class="uc">UC 出勤催促メール</span><a href="menu.html">メニュー</a></div>
+    <div class="head">
+      <div><h1>出勤催促メールの送信結果</h1><p class="sub">シフト自動作成で人数が足りなかった枠への自動送信の結果です</p></div>
+      <div class="actions"></div>
+    </div>
+
+<div class="alt note ng" id="err-fail" role="alert">2件のメール送信に失敗しました。失敗した履歴を記録しました。再送してください。<br><a class="btn sm" href="#" style="margin-top:6px">失敗分を再送する</a></div>
+
+<div class="alt note" id="warn-none" role="alert">送信対象の従業員がいないため、メールは送信していません。人数不足の枠を、シフト修正で直接調整してください。<br><a href="shift-edit.html">シフト修正へ</a></div>
+
+<div class="alt note" id="warn-noaddr" role="alert">メールアドレスが登録されていない従業員（2名）は、送信対象から外しました。<br><a href="employee-list.html">従業員一覧で確認する</a></div>
+
+<div class="note ok" style="margin-bottom:16px">人数が足りない枠について、出勤できる従業員へ出勤催促メールを送信しました。</div>
+<div class="kpis">
+  <div><div class="v">9<small> 件</small></div><div class="l">送信件数</div></div>
+  <div><div class="v">13<small> 枠</small></div><div class="l">対象の不足枠</div></div>
+  <div class="good"><div class="v">2<small> 件</small></div><div class="l">応じた従業員</div></div>
+  <div><div class="v">0<small> 件</small></div><div class="l">送信失敗</div></div>
+</div>
+<section class="panel">
+  <h2>送信履歴</h2>
+  <p class="lead">送信先・不足枠・送信日時の記録です。メールには、不足日時、応じ方、加算額（1,600円）を載せています。</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>不足日</th><th>時間帯</th><th class="num">不足</th><th>送信先</th><th>送信日時</th><th>状態</th></tr></thead>
+    <tbody><tr><td>11/1（日）</td><td>遅番</td><td class="num">3名</td><td>佐藤 健太、伊藤 大和</td><td>10/8 18:32</td><td><span class="badge ok">送信済み</span></td></tr><tr><td>11/2（月）</td><td>遅番</td><td class="num">1名</td><td>木戸 愛翔、鈴木 花、渡辺 結衣</td><td>10/8 18:32</td><td><span class="badge ok">送信済み</span></td></tr><tr><td>11/3（火）</td><td>遅番</td><td class="num">1名</td><td>高橋 悠、山本 蓮</td><td>10/8 18:32</td><td><span class="badge ok">送信済み</span></td></tr><tr><td>11/7（土）</td><td>遅番</td><td class="num">2名</td><td>高橋 悠</td><td>10/8 18:32</td><td><span class="badge ok">送信済み</span></td></tr><tr><td>11/14（土）</td><td>早番</td><td class="num">2名</td><td>田中 美咲、高橋 悠</td><td>10/8 18:32</td><td><span class="badge ok">送信済み</span></td></tr><tr><td>11/15（日）</td><td>遅番</td><td class="num">1名</td><td>伊藤 大和</td><td>10/8 18:32</td><td><span class="badge ok">送信済み</span></td></tr><tr><td>11/16（月）</td><td>遅番</td><td class="num">1名</td><td>木戸 愛翔、佐藤 健太、鈴木 花 ほか</td><td>10/8 18:32</td><td><span class="badge ok">送信済み</span></td></tr><tr><td>11/20（金）</td><td>遅番</td><td class="num">1名</td><td>松岡 玲、鈴木 花、山本 蓮</td><td>10/8 18:32</td><td><span class="badge ok">送信済み</span></td></tr></tbody></table></div>
+  <div class="actions" style="margin-top:14px"><a class="btn" href="allowance.html">催促加算の承認へ</a><a class="btn" href="shift-edit.html">シフト修正へ</a></div>
+</section>
+<div class="protonote no-print"><b>代替フローの表示確認（プロトタイプ用）</b><br><a href="#err-fail">送信失敗</a><a href="#warn-none">送信対象なし</a><a href="#warn-noaddr">メールアドレス未登録の除外</a><br><a href="#" style="margin-top:4px;display:inline-block">表示を閉じる</a></div>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>メニュー | らくらくシフト登録</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="menu.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト</a>
+    <a class="nav on" href="menu.html">メニュー</a><div class="grp">従業員管理</div><a class="nav" href="employee-list.html">従業員一覧（変更・削除）</a><a class="nav" href="employee-new.html">従業員登録</a><a class="nav" href="employee-import.html">CSV取込</a><div class="grp">シフト作成</div><a class="nav" href="conditions.html">勤務条件設定</a><a class="nav" href="shift-generate.html">シフト自動作成</a><a class="nav" href="reminder-log.html">出勤催促メール結果</a><a class="nav" href="allowance.html">催促加算の承認</a><div class="grp">シフト管理</div><a class="nav" href="shift-view.html">シフト確認</a><a class="nav" href="shift-edit.html">シフト修正</a><a class="nav" href="shift-confirm.html">シフト確定</a><a class="nav" href="shift-export.html">シフト表出力</a>
+    <div class="who"><b>木戸 愛翔 さん</b>管理者<br><a href="../login.html#loggedout">ログアウト</a></div>
+  </aside>
+  <main class="main">
+    <div class="crumb"><span class="uc">UC ログイン</span><a href="menu.html">メニュー</a></div>
+    <div class="head">
+      <div><h1>メニュー</h1><p class="sub">2026年11月分のシフト作成の進み具合</p></div>
+      <div class="actions"></div>
+    </div>
+
+<ol class="steps">
+  <li class="done"><b>1. 勤務条件設定</b>設定済み</li>
+  <li class="done"><b>2. 希望の受付</b>6/9名が登録済み</li>
+  <li class="now"><b>3. シフト自動作成</b>未実行</li>
+  <li><b>4. 修正・確認</b></li>
+  <li><b>5. シフト確定・出力</b></li>
+</ol>
+<div class="kpis">
+  <div><div class="v">6<small> / 9名</small></div><div class="l">希望休・勤務希望の登録状況</div></div>
+  <div><div class="v">10/25<small>（日）</small></div><div class="l">希望の締切</div></div>
+  <div class="bad"><div class="v">13<small> 枠</small></div><div class="l">人数が足りない枠（下書き）</div></div>
+  <div><div class="v">2<small> 件</small></div><div class="l">承認待ちの催促加算</div></div>
+</div>
+<div class="grp-title">従業員管理</div>
+<div class="tiles">
+  <a class="tile" href="employee-new.html"><b>従業員登録</b><span>新しい従業員を登録する</span></a>
+  <a class="tile" href="employee-list.html"><b>従業員情報変更・削除</b><span>一覧から選んで変更・削除する</span></a>
+  <a class="tile" href="employee-import.html"><b>CSV取込</b><span>従業員情報を一括登録する</span></a>
+</div>
+<div class="grp-title">シフトを作る</div>
+<div class="tiles">
+  <a class="tile" href="conditions.html"><b>勤務条件設定</b><span>必要人数・連勤上限・加算額</span></a>
+  <a class="tile" href="shift-generate.html"><b>シフト自動作成</b><span>希望と条件からシフト案を作る</span></a>
+  <a class="tile" href="reminder-log.html"><b>出勤催促メールの結果</b><span>不足枠への自動送信を確認</span></a>
+  <a class="tile" href="allowance.html"><b>催促加算の承認</b><span>応じた従業員の加算を承認する</span></a>
+</div>
+<div class="grp-title">シフトを確認・確定する</div>
+<div class="tiles">
+  <a class="tile" href="shift-view.html"><b>シフト確認</b><span>期間を選んで見る</span></a>
+  <a class="tile" href="shift-edit.html"><b>シフト修正</b><span>勤務日・時間・従業員を直す</span></a>
+  <a class="tile" href="shift-confirm.html"><b>シフト確定</b><span>内容を確認して確定する</span></a>
+  <a class="tile" href="shift-export.html"><b>シフト表出力</b><span>確定したシフト表をファイルにする</span></a>
+</div>
+
+  </main>
+</div>
+</body>
+</html>

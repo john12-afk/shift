@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>取込前の確認 | らくらくシフト登録</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="menu.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト</a>
+    <a class="nav" href="menu.html">メニュー</a><div class="grp">従業員管理</div><a class="nav" href="employee-list.html">従業員一覧（変更・削除）</a><a class="nav" href="employee-new.html">従業員登録</a><a class="nav on" href="employee-import.html">CSV取込</a><div class="grp">シフト作成</div><a class="nav" href="conditions.html">勤務条件設定</a><a class="nav" href="shift-generate.html">シフト自動作成</a><a class="nav" href="reminder-log.html">出勤催促メール結果</a><a class="nav" href="allowance.html">催促加算の承認</a><div class="grp">シフト管理</div><a class="nav" href="shift-view.html">シフト確認</a><a class="nav" href="shift-edit.html">シフト修正</a><a class="nav" href="shift-confirm.html">シフト確定</a><a class="nav" href="shift-export.html">シフト表出力</a>
+    <div class="who"><b>木戸 愛翔 さん</b>管理者<br><a href="../login.html#loggedout">ログアウト</a></div>
+  </aside>
+  <main class="main">
+    <div class="crumb"><span class="uc">UC CSV取込</span><a href="menu.html">メニュー</a></div>
+    <div class="head">
+      <div><h1>取込前の確認</h1></div>
+      <div class="actions"></div>
+    </div>
+
+<ol class="steps"><li class="done"><b>1. ファイルを選ぶ</b>staff_2026.csv</li><li class="now"><b>2. 取込前の確認</b></li><li><b>3. 取込結果</b></li></ol>
+<div class="alt note ng" id="err-format" role="alert">文字コードまたは項目の並びが想定と異なります。取込を中止しました。CSVを確認してもう一度選んでください。</div>
+
+<div class="kpis">
+  <div><div class="v">42<small> 行</small></div><div class="l">読み込んだ行数</div></div>
+  <div class="good"><div class="v">36<small> 件</small></div><div class="l">取込予定</div></div>
+  <div class="bad"><div class="v">3<small> 件</small></div><div class="l">エラーのある行</div></div>
+  <div><div class="v">3<small> 件</small></div><div class="l">登録済みと重複（取込対象外）</div></div>
+</div>
+<section class="panel">
+  <h2>エラーと重複の内容</h2>
+  <p class="lead">エラー行を除いて取り込むか、中止して直すかを選べます。</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th class="num">行</th><th>種類</th><th>項目</th><th>入力内容</th><th>内容</th></tr></thead>
+    <tbody>
+      <tr><td class="num">8</td><td><span class="badge ng">エラー</span></td><td>メールアドレス</td><td>sato#example.com</td><td>「@」を含む形式で入力してください</td></tr>
+      <tr><td class="num">17</td><td><span class="badge ng">エラー</span></td><td>氏名</td><td>（空欄）</td><td>必須項目です</td></tr>
+      <tr><td class="num">31</td><td><span class="badge ng">エラー</span></td><td>区分</td><td>パート</td><td>「社員」または「アルバイト」で入力してください</td></tr>
+      <tr><td class="num">5</td><td><span class="badge warn">重複</span></td><td>メールアドレス</td><td>tanaka@example.com</td><td>登録済みの従業員です（取込対象外）</td></tr>
+      <tr><td class="num">12</td><td><span class="badge warn">重複</span></td><td>メールアドレス</td><td>ito@example.com</td><td>登録済みの従業員です（取込対象外）</td></tr>
+      <tr><td class="num">26</td><td><span class="badge warn">重複</span></td><td>メールアドレス</td><td>matsuoka@example.com</td><td>登録済みの従業員です（取込対象外）</td></tr>
+    </tbody></table></div>
+</section>
+<div class="form-actions"><a class="btn" href="employee-import.html">中止する</a><a class="btn primary" href="employee-import-result.html">エラー行を除いて取り込む（36件）</a></div>
+<div class="protonote no-print"><b>代替フローの表示確認（プロトタイプ用）</b><br><a href="#err-format">文字コード・項目の不一致（取込中止）</a><br><a href="#" style="margin-top:4px;display:inline-block">表示を閉じる</a></div>
+  </main>
+</div>
+</body>
+</html>

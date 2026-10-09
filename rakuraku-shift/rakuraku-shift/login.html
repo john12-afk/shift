@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ログイン | らくらくシフト登録</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="login">
+  <section class="art">
+    <div>
+      <a class="brand" style="padding:0" href="login.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト登録</a>
+      <h1>シフト作成の調整時間を、短く。</h1>
+      <p>希望休と勤務希望を集めて、必要人数・連勤・公平性・スキルを考慮したシフト案を自動で作ります。店長は確認と微調整だけ。</p>
+      <div class="week" aria-hidden="true">
+        <span>従業員A</span><i class="b e"></i><i class="b e"></i><i class="b o"></i><i class="b e"></i><i class="b r"></i><i class="b e"></i><i class="b o"></i>
+        <span>従業員B</span><i class="b l"></i><i class="b o"></i><i class="b l"></i><i class="b l"></i><i class="b o"></i><i class="b l"></i><i class="b l"></i>
+        <span>従業員C</span><i class="b o"></i><i class="b e"></i><i class="b e"></i><i class="b o"></i><i class="b e"></i><i class="b l"></i><i class="b e"></i>
+      </div>
+    </div>
+    <p class="muted" style="color:#8fa0b3">通信はHTTPSで保護されます（本番想定）</p>
+  </section>
+  <section class="form">
+    <div class="in">
+      <h2 style="font-size:1.35rem;margin-bottom:20px">ログイン</h2>
+      <div class="alt note ok" id="loggedout" role="status">ログアウトしました。</div>
+      <div class="alt note ng" id="err-auth" role="alert">メールアドレスまたはパスワードが正しくありません。</div>
+      <div class="alt note ng" id="err-empty" role="alert">メールアドレスとパスワードを入力してください。</div>
+      <div class="field"><label for="uid">メールアドレス</label><input id="uid" type="email" autocomplete="username" value="kido@example.com"></div>
+      <div class="field"><label for="pw">パスワード</label><input id="pw" type="password" autocomplete="current-password" value="password"></div>
+      <a class="btn primary lg" style="display:block;text-align:center" href="admin/menu.html">ログイン</a>
+      <div class="demo">
+        <p class="muted">プロトタイプ用：権限ごとのメニュー画面へ</p>
+        <a class="btn" href="admin/menu.html">管理者として入る</a>
+        <a class="btn" href="employee/menu.html">従業員として入る</a>
+      </div>
+      <div class="protonote" style="margin-top:20px"><b>代替フローの表示確認</b><br>
+        <a href="#err-auth">認証失敗</a><a href="#err-empty">未入力</a><a href="#loggedout">ログアウト後</a></div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

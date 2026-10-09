@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>勤務条件設定 | らくらくシフト登録</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="menu.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト</a>
+    <a class="nav" href="menu.html">メニュー</a><div class="grp">従業員管理</div><a class="nav" href="employee-list.html">従業員一覧（変更・削除）</a><a class="nav" href="employee-new.html">従業員登録</a><a class="nav" href="employee-import.html">CSV取込</a><div class="grp">シフト作成</div><a class="nav on" href="conditions.html">勤務条件設定</a><a class="nav" href="shift-generate.html">シフト自動作成</a><a class="nav" href="reminder-log.html">出勤催促メール結果</a><a class="nav" href="allowance.html">催促加算の承認</a><div class="grp">シフト管理</div><a class="nav" href="shift-view.html">シフト確認</a><a class="nav" href="shift-edit.html">シフト修正</a><a class="nav" href="shift-confirm.html">シフト確定</a><a class="nav" href="shift-export.html">シフト表出力</a>
+    <div class="who"><b>木戸 愛翔 さん</b>管理者<br><a href="../login.html#loggedout">ログアウト</a></div>
+  </aside>
+  <main class="main">
+    <div class="crumb"><span class="uc">UC 勤務条件設定</span><a href="menu.html">メニュー</a></div>
+    <div class="head">
+      <div><h1>勤務条件設定</h1><p class="sub">シフト自動作成で使う必要人数・連勤上限・加算額を設定します</p></div>
+      <div class="actions"></div>
+    </div>
+
+<div class="alt note ng" id="err-empty" role="alert">必須項目が未入力です：必要人数、連勤上限日数、加算額</div>
+
+<div class="alt note ng" id="err-minmax" role="alert">最低人数が最大必要数を超えています。平日・遅番の値を確認してください。</div>
+
+<div class="alt note ng" id="err-run" role="alert">連勤上限日数は1以上の数字で入力してください。</div>
+
+<div class="alt note" id="locked" role="alert">この期間のシフトは確定済みのため、勤務条件を変更できません。</div>
+
+<div class="note info" style="margin-bottom:16px">この期間には設定済みの勤務条件があります。内容を表示しています（変更できます）。</div>
+<div class="inline" style="margin-bottom:16px"><b>対象期間</b>
+  <select style="max-width:240px" aria-label="対象期間"><option>2026年11月（11/1〜11/30）</option><option>2026年12月</option></select></div>
+<section class="panel">
+  <h2>必要人数</h2>
+  <p class="lead">日付・時間帯ごとに、最低人数と最大必要数を決めます。</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>日付</th><th>時間帯</th><th class="num">最低人数</th><th class="num">最大必要数</th><th>必須スキル</th></tr></thead>
+    <tbody>
+      <tr><td rowspan="2">平日（月〜金）</td><td>早番 9:00–17:00</td><td class="num"><input type="number" value="2" min="0" aria-label="平日早番 最低"></td><td class="num"><input type="number" value="3" min="0" aria-label="平日早番 最大"></td><td><label><input type="checkbox" checked> レジ 1名以上</label></td></tr>
+      <tr><td>遅番 14:00–22:00</td><td class="num"><input type="number" value="3" min="0" aria-label="平日遅番 最低"></td><td class="num"><input type="number" value="4" min="0" aria-label="平日遅番 最大"></td><td><label><input type="checkbox" checked> レジ 1名以上</label>　<label><input type="checkbox" checked> 調理 1名以上</label></td></tr>
+      <tr><td rowspan="2">土日・祝日</td><td>早番 9:00–17:00</td><td class="num"><input type="number" value="3" min="0" aria-label="休日早番 最低"></td><td class="num"><input type="number" value="4" min="0" aria-label="休日早番 最大"></td><td><label><input type="checkbox" checked> レジ 1名以上</label></td></tr>
+      <tr><td>遅番 14:00–22:00</td><td class="num"><input type="number" value="4" min="0" aria-label="休日遅番 最低"></td><td class="num"><input type="number" value="5" min="0" aria-label="休日遅番 最大"></td><td><label><input type="checkbox" checked> レジ 1名以上</label>　<label><input type="checkbox" checked> 調理 1名以上</label></td></tr>
+      <tr><td>11/23（月・祝）</td><td>遅番 14:00–22:00</td><td class="num"><input type="number" value="5" min="0" aria-label="11/23 遅番 最低"></td><td class="num"><input type="number" value="6" min="0" aria-label="11/23 遅番 最大"></td><td>日付を指定した変更　<a class="btn sm" href="#">削除</a></td></tr>
+    </tbody></table></div>
+  <div style="margin-top:10px"><a class="btn sm" href="#">日付を指定して追加</a></div>
+</section>
+<div class="cols even">
+<section class="panel">
+  <h2>連勤・公平性</h2>
+  <div class="field" style="margin:14px 0"><span class="lbl">連勤の上限</span><div class="inline">最大 <input type="number" value="5" aria-label="連勤上限日数"> 日まで</div></div>
+  <div class="field"><span class="lbl">勤務回数の公平性</span><div class="inline">従業員間の差を <input type="number" value="2" aria-label="勤務回数の許容差"> 日以内にする</div><div class="hint">同じ区分の従業員どうしで比べます。</div></div>
+</section>
+<section class="panel">
+  <h2>出勤催促の加算額</h2>
+  <p class="lead">人数不足の枠への出勤催促に応じた従業員に、1回あたり加算する金額です。</p>
+  <div class="inline"><input type="number" style="width:120px" value="1600" aria-label="加算額"> 円 / 1回</div>
+</section>
+</div>
+<div class="form-actions"><a class="btn" href="menu.html">キャンセル</a><a class="btn primary" href="conditions-done.html">登録する</a></div>
+<div class="protonote no-print"><b>代替フローの表示確認（プロトタイプ用）</b><br><a href="#err-empty">必須項目の未入力</a><a href="#err-minmax">最低人数 > 最大必要数</a><a href="#err-run">連勤上限が不正</a><a href="#locked">確定済みで変更不可</a><br><a href="#" style="margin-top:4px;display:inline-block">表示を閉じる</a></div>
+  </main>
+</div>
+</body>
+</html>

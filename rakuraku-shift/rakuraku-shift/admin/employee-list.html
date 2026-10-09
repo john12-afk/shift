@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>従業員一覧 | らくらくシフト登録</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="menu.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト</a>
+    <a class="nav" href="menu.html">メニュー</a><div class="grp">従業員管理</div><a class="nav on" href="employee-list.html">従業員一覧（変更・削除）</a><a class="nav" href="employee-new.html">従業員登録</a><a class="nav" href="employee-import.html">CSV取込</a><div class="grp">シフト作成</div><a class="nav" href="conditions.html">勤務条件設定</a><a class="nav" href="shift-generate.html">シフト自動作成</a><a class="nav" href="reminder-log.html">出勤催促メール結果</a><a class="nav" href="allowance.html">催促加算の承認</a><div class="grp">シフト管理</div><a class="nav" href="shift-view.html">シフト確認</a><a class="nav" href="shift-edit.html">シフト修正</a><a class="nav" href="shift-confirm.html">シフト確定</a><a class="nav" href="shift-export.html">シフト表出力</a>
+    <div class="who"><b>木戸 愛翔 さん</b>管理者<br><a href="../login.html#loggedout">ログアウト</a></div>
+  </aside>
+  <main class="main">
+    <div class="crumb"><span class="uc">UC 従業員情報変更・従業員削除</span><a href="menu.html">メニュー</a></div>
+    <div class="head">
+      <div><h1>従業員一覧</h1><p class="sub">変更・削除する従業員を選びます</p></div>
+      <div class="actions"><a class="btn" href="employee-import.html">CSVから取り込む</a><a class="btn primary" href="employee-new.html">従業員を登録</a></div>
+    </div>
+
+<section class="panel">
+  <div class="inline" style="margin-bottom:14px">
+    <input type="text" placeholder="氏名で検索" style="max-width:240px" aria-label="氏名で検索">
+    <select style="max-width:150px" aria-label="区分"><option>区分：すべて</option><option>社員</option><option>アルバイト</option></select>
+    <select style="max-width:150px" aria-label="スキル"><option>スキル：すべて</option><option>レジ</option><option>調理</option></select>
+    <a class="btn" href="#">検索</a>
+  </div>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>氏名</th><th>区分</th><th>スキル・資格</th><th>メールアドレス</th><th>勤務上限（目安）</th><th></th></tr></thead>
+    <tbody><tr><td><b>木戸 愛翔</b><div class="muted">キド アイト</div></td><td>社員</td><td><span class=tag>リーダー</span><span class=tag>レジ</span><span class=tag>調理</span></td><td>kido@example.com</td><td>週5日／40h</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr><tr><td><b>松岡 玲</b><div class="muted">マツオカ レイ</div></td><td>社員</td><td><span class=tag>サブリーダー</span><span class=tag>レジ</span></td><td>matsuoka@example.com</td><td>週5日／40h</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr><tr><td><b>田中 美咲</b><div class="muted">タナカ ミサキ</div></td><td>社員</td><td><span class=tag>レジ</span><span class=tag>調理</span></td><td>tanaka@example.com</td><td>週5日／40h</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr><tr><td><b>佐藤 健太</b><div class="muted">サトウ ケンタ</div></td><td>アルバイト</td><td><span class=tag>レジ</span></td><td>sato@example.com</td><td>週4日／28h</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr><tr><td><b>鈴木 花</b><div class="muted">スズキ ハナ</div></td><td>アルバイト</td><td><span class=tag>調理</span></td><td>suzuki@example.com</td><td>週4日／28h</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr><tr><td><b>高橋 悠</b><div class="muted">タカハシ ユウ</div></td><td>アルバイト</td><td><span class=tag>レジ</span><span class=tag>調理</span></td><td>takahashi@example.com</td><td>週4日／28h</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr><tr><td><b>伊藤 大和</b><div class="muted">イトウ ヤマト</div></td><td>アルバイト</td><td><span class=tag>レジ</span></td><td>ito@example.com</td><td>週4日／28h</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr><tr><td><b>渡辺 結衣</b><div class="muted">ワタナベ ユイ</div></td><td>アルバイト</td><td><span class=tag>調理</span></td><td>watanabe@example.com</td><td>週4日／28h</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr><tr><td><b>山本 蓮</b><div class="muted">ヤマモト レン</div></td><td>アルバイト</td><td><span class=tag>レジ</span><span class=tag>調理</span></td><td>yamamoto@example.com</td><td>週4日／28h</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr></tbody></table></div>
+  <p class="muted" style="margin-top:10px">全9名</p>
+</section>
+  </main>
+</div>
+</body>
+</html>

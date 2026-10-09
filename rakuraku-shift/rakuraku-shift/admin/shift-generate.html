@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>シフト自動作成 | らくらくシフト登録</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="menu.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト</a>
+    <a class="nav" href="menu.html">メニュー</a><div class="grp">従業員管理</div><a class="nav" href="employee-list.html">従業員一覧（変更・削除）</a><a class="nav" href="employee-new.html">従業員登録</a><a class="nav" href="employee-import.html">CSV取込</a><div class="grp">シフト作成</div><a class="nav" href="conditions.html">勤務条件設定</a><a class="nav on" href="shift-generate.html">シフト自動作成</a><a class="nav" href="reminder-log.html">出勤催促メール結果</a><a class="nav" href="allowance.html">催促加算の承認</a><div class="grp">シフト管理</div><a class="nav" href="shift-view.html">シフト確認</a><a class="nav" href="shift-edit.html">シフト修正</a><a class="nav" href="shift-confirm.html">シフト確定</a><a class="nav" href="shift-export.html">シフト表出力</a>
+    <div class="who"><b>木戸 愛翔 さん</b>管理者<br><a href="../login.html#loggedout">ログアウト</a></div>
+  </aside>
+  <main class="main">
+    <div class="crumb"><span class="uc">UC シフト自動作成</span><a href="menu.html">メニュー</a></div>
+    <div class="head">
+      <div><h1>シフト自動作成</h1><p class="sub">希望と勤務条件からシフト案を作ります</p></div>
+      <div class="actions"></div>
+    </div>
+
+<div class="alt note ng" id="err-info" role="alert">シフトを作成できません。必要な情報が不足しています：対象期間の勤務条件が設定されていません。<br><a href="conditions.html">勤務条件設定へ</a></div>
+
+<ol class="steps">
+  <li class="done"><b>1. 勤務条件設定</b>設定済み</li><li class="done"><b>2. 希望の受付</b>6/9名</li>
+  <li class="now"><b>3. シフト自動作成</b>結果を確認</li><li><b>4. 修正・確認</b></li><li><b>5. 確定・出力</b></li>
+</ol>
+<section class="panel">
+  <h2>作成の実行</h2>
+  <div class="form-grid" style="margin-top:12px">
+    <div class="field"><label for="p">対象期間</label><select id="p"><option>2026年11月（11/1〜11/30）</option></select></div>
+    <div class="field"><span class="lbl">使う情報</span><div class="muted">勤務希望・希望休（6/9名分）、勤務条件（設定済み）</div></div>
+  </div>
+  <div class="actions" style="margin-top:14px"><a class="btn primary lg" href="#">シフト案を作成する</a></div>
+</section>
+<div class="note ok" style="margin-bottom:16px">シフト案を作成しました（所要時間 38秒）。</div>
+<div class="alt note" id="warn" role="alert" style="display:block"><b>警告：</b>条件をすべて満たすシフトは作れませんでした。連勤上限を超える従業員が1名います。</div>
+<div class="kpis">
+  <div><div class="v">78<small> %</small></div><div class="l">必要人数の充足率（全60枠）</div></div>
+  <div class="bad"><div class="v">13<small> 枠</small></div><div class="l">人数が足りない枠</div></div>
+  <div class="bad"><div class="v">1<small> 名</small></div><div class="l">連勤上限を超える従業員</div></div>
+  <div><div class="v">9<small> 名</small></div><div class="l">出勤催促メールの送信先</div></div>
+</div>
+<section class="panel" id="shortage">
+  <h2>人数が足りない枠</h2>
+  <p class="lead">不足している枠には、出勤できる従業員へ出勤催促メールを自動で送りました。<a href="reminder-log.html">送信結果を見る</a></p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>日付</th><th>時間帯</th><th class="num">必要</th><th class="num">配置</th><th class="num">不足</th><th></th></tr></thead>
+    <tbody><tr><td>11/1（日）</td><td>遅番 14:00–22:00</td><td class="num">4</td><td class="num">1</td><td class="num"><span class="badge ng">あと3名</span></td><td class="num"><a class="btn sm" href="shift-edit.html">修正へ</a></td></tr><tr><td>11/2（月）</td><td>遅番 14:00–22:00</td><td class="num">3</td><td class="num">2</td><td class="num"><span class="badge ng">あと1名</span></td><td class="num"><a class="btn sm" href="shift-edit.html">修正へ</a></td></tr><tr><td>11/3（火）</td><td>遅番 14:00–22:00</td><td class="num">4</td><td class="num">3</td><td class="num"><span class="badge ng">あと1名</span></td><td class="num"><a class="btn sm" href="shift-edit.html">修正へ</a></td></tr><tr><td>11/7（土）</td><td>遅番 14:00–22:00</td><td class="num">4</td><td class="num">2</td><td class="num"><span class="badge ng">あと2名</span></td><td class="num"><a class="btn sm" href="shift-edit.html">修正へ</a></td></tr><tr><td>11/14（土）</td><td>早番 9:00–17:00</td><td class="num">3</td><td class="num">1</td><td class="num"><span class="badge ng">あと2名</span></td><td class="num"><a class="btn sm" href="shift-edit.html">修正へ</a></td></tr><tr><td>11/15（日）</td><td>遅番 14:00–22:00</td><td class="num">4</td><td class="num">3</td><td class="num"><span class="badge ng">あと1名</span></td><td class="num"><a class="btn sm" href="shift-edit.html">修正へ</a></td></tr><tr><td>11/16（月）</td><td>遅番 14:00–22:00</td><td class="num">3</td><td class="num">2</td><td class="num"><span class="badge ng">あと1名</span></td><td class="num"><a class="btn sm" href="shift-edit.html">修正へ</a></td></tr><tr><td>11/20（金）</td><td>遅番 14:00–22:00</td><td class="num">3</td><td class="num">2</td><td class="num"><span class="badge ng">あと1名</span></td><td class="num"><a class="btn sm" href="shift-edit.html">修正へ</a></td></tr></tbody></table></div>
+  <p class="muted" style="margin-top:8px">全13枠のうち先頭8枠を表示</p>
+</section>
+<div class="form-actions"><a class="btn" href="conditions.html">条件を見直す</a><a class="btn primary" href="shift-view.html">作成されたシフトを見る</a></div>
+<div class="protonote no-print"><b>代替フローの表示確認（プロトタイプ用）</b><br><a href="#err-info">必要な情報の不足</a><br><a href="#" style="margin-top:4px;display:inline-block">表示を閉じる</a></div>
+  </main>
+</div>
+</body>
+</html>

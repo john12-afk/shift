@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>催促加算の承認 | らくらくシフト登録</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="menu.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト</a>
+    <a class="nav" href="menu.html">メニュー</a><div class="grp">従業員管理</div><a class="nav" href="employee-list.html">従業員一覧（変更・削除）</a><a class="nav" href="employee-new.html">従業員登録</a><a class="nav" href="employee-import.html">CSV取込</a><div class="grp">シフト作成</div><a class="nav" href="conditions.html">勤務条件設定</a><a class="nav" href="shift-generate.html">シフト自動作成</a><a class="nav" href="reminder-log.html">出勤催促メール結果</a><a class="nav on" href="allowance.html">催促加算の承認</a><div class="grp">シフト管理</div><a class="nav" href="shift-view.html">シフト確認</a><a class="nav" href="shift-edit.html">シフト修正</a><a class="nav" href="shift-confirm.html">シフト確定</a><a class="nav" href="shift-export.html">シフト表出力</a>
+    <div class="who"><b>木戸 愛翔 さん</b>管理者<br><a href="../login.html#loggedout">ログアウト</a></div>
+  </aside>
+  <main class="main">
+    <div class="crumb"><span class="uc">UC 催促加算（給与アップ）</span><a href="menu.html">メニュー</a></div>
+    <div class="head">
+      <div><h1>催促加算の承認</h1><p class="sub">出勤催促に応じた従業員の加算を、管理者が確認して確定します</p></div>
+      <div class="actions"></div>
+    </div>
+
+<div class="alt note ok" id="approved" role="alert">加算を確定しました。</div>
+
+<div class="alt note" id="rejected" role="alert">却下として記録しました。加算は付与されません。</div>
+
+<div class="kpis">
+  <div class="bad"><div class="v">2<small> 件</small></div><div class="l">承認待ち</div></div>
+  <div class="good"><div class="v">1<small> 件</small></div><div class="l">確定</div></div>
+  <div><div class="v">1<small> 件</small></div><div class="l">却下</div></div>
+  <div><div class="v">1,600円</div><div class="l">確定した加算の合計</div></div>
+</div>
+<section class="panel">
+  <h2>催促加算の一覧</h2>
+  <p class="lead">出勤催促メールに応じた従業員は、すでに不足していた枠のシフトに追加されています。内容を確認して承認してください。</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>日付</th><th>時間帯</th><th>従業員</th><th>区分</th><th class="num">加算額</th><th>状態</th><th></th></tr></thead>
+    <tbody><tr><td>11/1（日）</td><td>遅番 14:00–22:00</td><td>佐藤 健太</td><td>アルバイト</td><td class="num">1,600円</td><td><span class="badge warn">承認待ち</span></td><td class="num"><a class="btn sm primary" href="#approved">承認</a> <a class="btn sm danger" href="#rejected">却下</a></td></tr><tr><td>11/2（月）</td><td>遅番 14:00–22:00</td><td>木戸 愛翔</td><td>社員</td><td class="num">1,600円</td><td><span class="badge warn">承認待ち</span></td><td class="num"><a class="btn sm primary" href="#approved">承認</a> <a class="btn sm danger" href="#rejected">却下</a></td></tr><tr><td>11/3（火）</td><td>遅番 14:00–22:00</td><td>高橋 悠</td><td>アルバイト</td><td class="num">1,600円</td><td><span class="badge ok">確定</span></td><td class="num"></td></tr><tr><td>11/7（土）</td><td>遅番 14:00–22:00</td><td>高橋 悠</td><td>アルバイト</td><td class="num">1,600円</td><td><span class="badge ng">却下</span></td><td class="num"></td></tr></tbody></table></div>
+  <div class="actions" style="margin-top:14px"><a class="btn" href="shift-view.html">シフトで確認する</a></div>
+</section>
+<div class="protonote no-print"><b>代替フローの表示確認（プロトタイプ用）</b><br><a href="#approved">承認した場合</a><a href="#rejected">承認しない（却下）場合</a><br><a href="#" style="margin-top:4px;display:inline-block">表示を閉じる</a></div>
+  </main>
+</div>
+</body>
+</html>

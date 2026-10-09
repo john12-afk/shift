@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>出勤催促 | らくらくシフト登録</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="m-top"><a class="brand" href="menu.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト</a><a class="out" href="../login.html#loggedout">ログアウト</a></div>
+<nav class="m-nav"><a class="" href="menu.html">メニュー</a><a class="" href="request-off.html">希望休</a><a class="" href="request-work.html">勤務希望</a><a class="" href="shift.html">シフト</a><a class="on" href="offer.html">催促</a></nav>
+<main class="m-main">
+
+<h1>出勤のお願い</h1>
+<p class="muted" style="margin-bottom:14px">人数が足りない日です。出勤できる日があれば選んでください。</p>
+<div class="alt note" id="closed" role="alert">この枠は、ほかの従業員が先に応じたため、受付を終了しました。加算はありません。</div>
+
+<div class="alt note ng" id="err-cond" role="alert">この日に出勤すると連勤の上限（5日）を超えるため、応じることができません。</div>
+
+<section class="panel">
+  <div class="inline" style="justify-content:space-between"><h2>11/3（火） 遅番</h2><span class="badge info">受付中</span></div>
+  <p class="lead">14:00–22:00（8時間）　あと1名</p>
+  <p style="margin-bottom:12px">出勤すると <b>1,600円</b> が加算されます。</p>
+  <div class="actions"><a class="btn primary" href="offer-done.html">出勤する</a><a class="btn" href="menu.html">出勤しない</a></div>
+</section>
+<section class="panel">
+  <div class="inline" style="justify-content:space-between"><h2>11/7（土） 遅番</h2><span class="badge info">受付中</span></div>
+  <p class="lead">14:00–22:00（8時間）　あと2名</p>
+  <p style="margin-bottom:12px">出勤すると <b>1,600円</b> が加算されます。</p>
+  <div class="actions"><a class="btn primary" href="offer-done.html">出勤する</a><a class="btn" href="menu.html">出勤しない</a></div>
+</section>
+<section class="panel">
+  <div class="inline" style="justify-content:space-between"><h2>11/14（土） 早番</h2><span class="badge info">受付中</span></div>
+  <p class="lead">9:00–17:00（8時間）　あと2名</p>
+  <p style="margin-bottom:12px">出勤すると <b>1,600円</b> が加算されます。</p>
+  <div class="actions"><a class="btn primary" href="offer-done.html">出勤する</a><a class="btn" href="menu.html">出勤しない</a></div>
+</section>
+
+<div class="protonote no-print"><b>代替フローの表示確認（プロトタイプ用）</b><br><a href="#closed">受付終了（先に応じた人がいる）</a><a href="#err-cond">連勤上限などの勤務条件に違反</a><br><a href="#" style="margin-top:4px;display:inline-block">表示を閉じる</a></div>
+</main>
+</body>
+</html>

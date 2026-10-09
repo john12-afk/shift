@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSV取込 | らくらくシフト登録</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="menu.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト</a>
+    <a class="nav" href="menu.html">メニュー</a><div class="grp">従業員管理</div><a class="nav" href="employee-list.html">従業員一覧（変更・削除）</a><a class="nav" href="employee-new.html">従業員登録</a><a class="nav on" href="employee-import.html">CSV取込</a><div class="grp">シフト作成</div><a class="nav" href="conditions.html">勤務条件設定</a><a class="nav" href="shift-generate.html">シフト自動作成</a><a class="nav" href="reminder-log.html">出勤催促メール結果</a><a class="nav" href="allowance.html">催促加算の承認</a><div class="grp">シフト管理</div><a class="nav" href="shift-view.html">シフト確認</a><a class="nav" href="shift-edit.html">シフト修正</a><a class="nav" href="shift-confirm.html">シフト確定</a><a class="nav" href="shift-export.html">シフト表出力</a>
+    <div class="who"><b>木戸 愛翔 さん</b>管理者<br><a href="../login.html#loggedout">ログアウト</a></div>
+  </aside>
+  <main class="main">
+    <div class="crumb"><span class="uc">UC CSV取込</span><a href="menu.html">メニュー</a></div>
+    <div class="head">
+      <div><h1>CSV取込</h1><p class="sub">従業員情報を一括で登録します</p></div>
+      <div class="actions"></div>
+    </div>
+
+<ol class="steps"><li class="now"><b>1. ファイルを選ぶ</b></li><li><b>2. 取込前の確認</b></li><li><b>3. 取込結果</b></li></ol>
+<div class="alt note ng" id="err-notcsv" role="alert">CSV形式のファイルを選択してください。</div>
+
+<section class="panel">
+  <h2>CSVファイルの選択</h2>
+  <p class="lead"><a href="#">取込用のCSV見本をダウンロード</a>　項目：氏名、フリガナ、区分、メールアドレス、スキル ほか</p>
+  <div class="form-grid">
+    <div class="field"><label for="f">CSVファイル</label><input id="f" type="file" accept=".csv"></div>
+    <div class="field"><label for="enc">文字コード</label><select id="enc"><option>UTF-8（BOM付き・Excel向け）</option><option>Shift_JIS</option></select></div>
+  </div>
+</section>
+<div class="form-actions"><a class="btn" href="employee-list.html">キャンセル</a><a class="btn primary" href="employee-import-check.html">取込前に確認する</a></div>
+<div class="protonote no-print"><b>代替フローの表示確認（プロトタイプ用）</b><br><a href="#err-notcsv">CSV以外のファイル</a><br><a href="#" style="margin-top:4px;display:inline-block">表示を閉じる</a></div>
+  </main>
+</div>
+</body>
+</html>
