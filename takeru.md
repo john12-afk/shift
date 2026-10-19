@@ -1,1 +1,0 @@
-# oreha takeruda
