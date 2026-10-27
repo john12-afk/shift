@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>出勤催促 | らくらくシフト登録</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="m-top"><a class="brand" href="menu.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト</a><a class="out" href="../login.html#loggedout">ログアウト</a></div>
+<nav class="m-nav"><a class="" href="menu.html">メニュー</a><a class="" href="request.html">勤務希望</a><a class="" href="shift.html">シフト</a><a class="on" href="offer.html">出勤催促</a></nav>
+<main class="m-main">
+
+<h1>出勤催促</h1>
+<p class="muted" style="margin-bottom:14px">人数が足りない日です。返信期限内に、出勤するかどうかを答えてください。</p>
+<div class="alt note" id="none" role="alert">催促はありません。</div>
+
+<div class="alt note ng" id="expired" role="alert">返信期限が過ぎています。回答を受け付けられません。</div>
+
+<div class="alt note ng" id="err-save" role="alert">回答を記録できませんでした。もう一度操作してください。</div>
+
+<section class="panel">
+  <div class="inline" style="justify-content:space-between"><h2>11/3（火） 遅番</h2><span class="badge warn">未回答</span></div>
+  <p class="lead">14:00–22:00　あと1名　<b>返信期限：10/31（土）18:00</b></p>
+  <div class="actions"><a class="btn primary" href="offer-done.html">出勤する</a><a class="btn" href="menu.html">出勤しない</a></div>
+</section>
+<section class="panel">
+  <div class="inline" style="justify-content:space-between"><h2>11/7（土） 遅番</h2><span class="badge warn">未回答</span></div>
+  <p class="lead">14:00–22:00　あと2名　<b>返信期限：10/31（土）18:00</b></p>
+  <div class="actions"><a class="btn primary" href="offer-done.html">出勤する</a><a class="btn" href="menu.html">出勤しない</a></div>
+</section>
+<section class="panel">
+  <div class="inline" style="justify-content:space-between"><h2>11/14（土） 早番</h2><span class="badge warn">未回答</span></div>
+  <p class="lead">9:00–17:00　あと2名　<b>返信期限：10/31（土）18:00</b></p>
+  <div class="actions"><a class="btn primary" href="offer-done.html">出勤する</a><a class="btn" href="menu.html">出勤しない</a></div>
+</section>
+
+<p class="muted">「出勤しない」を押すと「辞退」として記録され、一覧から消えます。返信期限を過ぎた催促と、シフトが確定した枠の催促は一覧に表示されません。</p>
+<div class="protonote no-print"><b>代替フローの表示確認（プロトタイプ用）</b><br><a href="#none">回答待ちの催促がない</a><a href="#expired">返信期限を過ぎた催促を選んだ</a><a href="#err-save">回答の記録に失敗</a><br><a href="#" style="margin-top:4px;display:inline-block">表示を閉じる</a></div>
+</main>
+</body>
+</html>

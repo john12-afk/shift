@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>出勤催促メールの結果確認 | らくらくシフト登録</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="menu.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト</a>
+    <a class="nav" href="menu.html">管理者メニュー</a><div class="grp">従業員管理</div><a class="nav" href="employee-list.html">従業員一覧（変更・削除）</a><a class="nav" href="employee-new.html">従業員登録</a><div class="grp">シフト作成</div><a class="nav" href="conditions.html">勤務条件設定</a><a class="nav" href="shift-generate.html">シフト自動作成</a><a class="nav on" href="reminder-result.html">出勤催促メールの結果確認</a><a class="nav" href="approval.html">催促承認</a><div class="grp">シフト管理</div><a class="nav" href="shift-view.html">シフト確認</a><a class="nav" href="shift-edit.html">シフト修正</a><a class="nav" href="shift-confirm.html">シフト確定</a><a class="nav" href="shift-export.html">シフト表出力</a>
+    <div class="who"><b>木戸 愛翔 さん</b>管理者<br><a href="select.html">画面を切り替える</a>　<a href="../login.html#loggedout">ログアウト</a></div>
+  </aside>
+  <main class="main">
+    <div class="crumb"><span class="uc">UC 出勤催促メールの結果確認・出勤催促メール</span></div>
+    <div class="head"><div><h1>出勤催促メールの結果確認</h1><p class="sub">シフト自動作成で人数が足りなかった枠への、自動送信の結果です</p></div><div class="actions"></div></div>
+
+<div class="alt note" id="warn-none" role="alert">送信対象の従業員がいないため、メールは送信していません。人数不足の枠を、シフト修正で直接調整してください。<br><a href="shift-edit.html">シフト修正へ</a></div>
+
+<div class="alt note ng" id="err-fail" role="alert">2件のメール送信に失敗しました。失敗した履歴を記録しました。再送してください。<br><a class="btn sm" href="#resent" style="margin-top:6px">失敗分を再送する</a></div>
+
+<div class="alt note ok" id="resent" role="alert">失敗分を再送しました。</div>
+
+<div class="kpis">
+  <div><div class="v">9<small> 件</small></div><div class="l">送信件数</div></div>
+  <div><div class="v">13<small> 枠</small></div><div class="l">対象の不足枠</div></div>
+  <div class="good"><div class="v">3<small> 名</small></div><div class="l">応じた従業員数</div></div>
+  <div><div class="v">0<small> 件</small></div><div class="l">送信失敗数</div></div>
+</div>
+<section class="panel"><h2>送信履歴</h2>
+  <p class="lead">メールには、不足日時・応じ方・返信期限（10/31（土）18:00）を載せています。</p>
+  <div class="tbl-wrap"><table class="tbl"><thead><tr><th>不足日</th><th>時間帯</th><th class="num">不足人数</th><th>送信先従業員</th><th>送信日時</th><th>状態</th></tr></thead><tbody><tr><td>11/1（日）</td><td>遅番</td><td class="num">3名</td><td>佐藤 健太、伊藤 大和（2名）</td><td>10/29 10:15</td><td><span class="badge ok">送信済み</span> <span class="badge ng">不足が残ります</span></td></tr><tr><td>11/2（月）</td><td>遅番</td><td class="num">1名</td><td>木戸 愛翔、鈴木 花、渡辺 結衣（3名）</td><td>10/29 10:15</td><td><span class="badge ok">送信済み</span></td></tr><tr><td>11/3（火）</td><td>遅番</td><td class="num">1名</td><td>高橋 悠、山本 蓮（2名）</td><td>10/29 10:15</td><td><span class="badge ok">送信済み</span></td></tr><tr><td>11/7（土）</td><td>遅番</td><td class="num">2名</td><td>高橋 悠（1名）</td><td>10/29 10:15</td><td><span class="badge ok">送信済み</span> <span class="badge ng">不足が残ります</span></td></tr><tr><td>11/14（土）</td><td>早番</td><td class="num">2名</td><td>田中 美咲、高橋 悠（2名）</td><td>10/29 10:15</td><td><span class="badge ok">送信済み</span></td></tr><tr><td>11/15（日）</td><td>遅番</td><td class="num">1名</td><td>伊藤 大和（1名）</td><td>10/29 10:15</td><td><span class="badge ok">送信済み</span></td></tr><tr><td>11/16（月）</td><td>遅番</td><td class="num">1名</td><td>木戸 愛翔、佐藤 健太、鈴木 花 ほか（4名）</td><td>10/29 10:15</td><td><span class="badge ok">送信済み</span></td></tr><tr><td>11/20（金）</td><td>遅番</td><td class="num">1名</td><td>松岡 玲、鈴木 花、山本 蓮（3名）</td><td>10/29 10:15</td><td><span class="badge ok">送信済み</span></td></tr></tbody></table></div>
+  <div class="actions" style="margin-top:14px"><a class="btn primary" href="approval.html">催促承認へ</a><a class="btn" href="shift-edit.html">シフト修正へ</a></div></section>
+<div class="protonote no-print"><b>代替フローの表示確認（プロトタイプ用）</b><br><a href="#warn-none">送信対象の従業員がいない</a><a href="#err-fail">メール送信に失敗</a><br><a href="#" style="margin-top:4px;display:inline-block">表示を閉じる</a></div>
+  </main>
+</div>
+</body>
+</html>

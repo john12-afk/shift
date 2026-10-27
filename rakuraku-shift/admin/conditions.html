@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>勤務条件設定 | らくらくシフト登録</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="menu.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト</a>
+    <a class="nav" href="menu.html">管理者メニュー</a><div class="grp">従業員管理</div><a class="nav" href="employee-list.html">従業員一覧（変更・削除）</a><a class="nav" href="employee-new.html">従業員登録</a><div class="grp">シフト作成</div><a class="nav on" href="conditions.html">勤務条件設定</a><a class="nav" href="shift-generate.html">シフト自動作成</a><a class="nav" href="reminder-result.html">出勤催促メールの結果確認</a><a class="nav" href="approval.html">催促承認</a><div class="grp">シフト管理</div><a class="nav" href="shift-view.html">シフト確認</a><a class="nav" href="shift-edit.html">シフト修正</a><a class="nav" href="shift-confirm.html">シフト確定</a><a class="nav" href="shift-export.html">シフト表出力</a>
+    <div class="who"><b>木戸 愛翔 さん</b>管理者<br><a href="select.html">画面を切り替える</a>　<a href="../login.html#loggedout">ログアウト</a></div>
+  </aside>
+  <main class="main">
+    <div class="crumb"><span class="uc">UC 勤務条件設定</span></div>
+    <div class="head"><div><h1>勤務条件設定</h1><p class="sub">提出期限・返信期限・必要人数・連勤上限を設定します</p></div><div class="actions"></div></div>
+
+<div class="alt note ng" id="err-empty" role="alert">必須項目が未入力です：勤務希望提出期限、返信期限、必要人数、連勤上限日数</div>
+
+<div class="alt note ng" id="err-minmax" role="alert">最低人数が最大必要数を超えています。平日・遅番の値を確認してください。</div>
+
+<div class="alt note ng" id="err-run" role="alert">連勤上限日数は1以上の数字で入力してください。</div>
+
+<div class="alt note" id="locked" role="alert">この期間のシフトは確定済みのため、勤務条件を変更できません。</div>
+
+<div class="note info" style="margin-bottom:16px">この期間には設定済みの勤務条件があります。内容を表示しています（変更できます）。</div>
+<section class="panel"><h2>対象期間と期限</h2>
+  <div class="form-grid" style="margin-top:12px">
+    <div class="field"><label for="c1">対象期間</label><select id="c1"><option>2026年11月（11/1〜11/30）</option><option>2026年12月</option></select></div>
+    <div class="field"><label for="c2">勤務希望の提出期限<span class="req">必須</span></label><input id="c2" type="date" value="2026-10-28"><div class="hint">従業員が勤務希望（休日希望を含む）を登録できる期限です。</div></div>
+    <div class="field"><label for="c3">出勤催促メールの返信期限<span class="req">必須</span></label><input id="c3" type="date" value="2026-10-31"><div class="hint">催促メールに「出勤する」と返信できる期限です。</div></div>
+  </div></section>
+<section class="panel"><h2>必要人数</h2>
+  <p class="lead">日付・時間帯ごとに、最低人数と最大必要数を決めます。</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>日付</th><th>時間帯</th><th class="num">最低人数</th><th class="num">最大必要数</th></tr></thead>
+    <tbody>
+      <tr><td rowspan="2">平日（月〜金）</td><td>早番 9:00–17:00</td><td class="num"><input type="number" value="2" min="0" aria-label="平日早番 最低"></td><td class="num"><input type="number" value="3" min="0" aria-label="平日早番 最大"></td></tr>
+      <tr><td>遅番 14:00–22:00</td><td class="num"><input type="number" value="3" min="0" aria-label="平日遅番 最低"></td><td class="num"><input type="number" value="4" min="0" aria-label="平日遅番 最大"></td></tr>
+      <tr><td rowspan="2">土日・祝日</td><td>早番 9:00–17:00</td><td class="num"><input type="number" value="3" min="0" aria-label="休日早番 最低"></td><td class="num"><input type="number" value="4" min="0" aria-label="休日早番 最大"></td></tr>
+      <tr><td>遅番 14:00–22:00</td><td class="num"><input type="number" value="4" min="0" aria-label="休日遅番 最低"></td><td class="num"><input type="number" value="5" min="0" aria-label="休日遅番 最大"></td></tr>
+    </tbody></table></div></section>
+<section class="panel"><h2>連勤上限</h2>
+  <div class="inline" style="margin-top:10px">最大 <input type="number" value="5" aria-label="連勤上限日数"> 日まで連続して勤務できる</div></section>
+<div class="form-actions"><a class="btn" href="menu.html">キャンセル</a><a class="btn primary" href="conditions-done.html">登録する</a></div>
+<div class="protonote no-print"><b>代替フローの表示確認（プロトタイプ用）</b><br><a href="#err-empty">必須項目の未入力</a><a href="#err-minmax">最低人数 > 最大必要数</a><a href="#err-run">連勤上限が不正（0以下など）</a><a href="#locked">確定済みで変更不可</a><br><a href="#" style="margin-top:4px;display:inline-block">表示を閉じる</a></div>
+  </main>
+</div>
+</body>
+</html>

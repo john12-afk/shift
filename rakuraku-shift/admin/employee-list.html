@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>従業員一覧 | らくらくシフト登録</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="menu.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト</a>
+    <a class="nav" href="menu.html">管理者メニュー</a><div class="grp">従業員管理</div><a class="nav on" href="employee-list.html">従業員一覧（変更・削除）</a><a class="nav" href="employee-new.html">従業員登録</a><div class="grp">シフト作成</div><a class="nav" href="conditions.html">勤務条件設定</a><a class="nav" href="shift-generate.html">シフト自動作成</a><a class="nav" href="reminder-result.html">出勤催促メールの結果確認</a><a class="nav" href="approval.html">催促承認</a><div class="grp">シフト管理</div><a class="nav" href="shift-view.html">シフト確認</a><a class="nav" href="shift-edit.html">シフト修正</a><a class="nav" href="shift-confirm.html">シフト確定</a><a class="nav" href="shift-export.html">シフト表出力</a>
+    <div class="who"><b>木戸 愛翔 さん</b>管理者<br><a href="select.html">画面を切り替える</a>　<a href="../login.html#loggedout">ログアウト</a></div>
+  </aside>
+  <main class="main">
+    <div class="crumb"><span class="uc">UC 従業員情報変更・従業員削除</span></div>
+    <div class="head"><div><h1>従業員一覧</h1><p class="sub">変更・削除する従業員を選びます（区分・スキルで絞り込めます）</p></div><div class="actions"><a class="btn primary" href="employee-new.html">従業員を登録</a></div></div>
+
+<div class="alt note ng" id="err-self" role="alert">ログイン中の本人、または管理者権限を持つ最後の1人は削除できません。</div>
+
+<div class="alt note ng" id="err-shift" role="alert">今後のシフト（未確定・確定済み）に割り当てられている従業員は削除できません。シフトを修正してから削除してください。<br><a href="shift-edit.html">シフト修正へ</a></div>
+
+<section class="panel">
+  <div class="inline" style="margin-bottom:14px">
+    <select style="max-width:170px" aria-label="区分で絞り込み"><option>区分：すべて</option><option>社員</option><option>アルバイト</option></select>
+    <select style="max-width:170px" aria-label="スキルで絞り込み"><option>スキル：すべて</option><option>レジ</option><option>調理</option><option>リーダー</option></select>
+    <a class="btn" href="#">絞り込む</a>
+  </div>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>氏名</th><th>区分</th><th>権限</th><th>スキル・資格</th><th>メールアドレス</th><th></th></tr></thead>
+    <tbody><tr><td><b>木戸 愛翔</b><div class="muted">キド アイト</div></td><td>社員</td><td>管理者</td><td><span class=tag>リーダー</span><span class=tag>レジ</span><span class=tag>調理</span></td><td>kido@example.com</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="#err-self">削除</a></td></tr><tr><td><b>松岡 玲</b><div class="muted">マツオカ レイ</div></td><td>社員</td><td>管理者</td><td><span class=tag>サブリーダー</span><span class=tag>レジ</span></td><td>matsuoka@example.com</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr><tr><td><b>田中 美咲</b><div class="muted">タナカ ミサキ</div></td><td>社員</td><td>従業員</td><td><span class=tag>レジ</span><span class=tag>調理</span></td><td>tanaka@example.com</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr><tr><td><b>佐藤 健太</b><div class="muted">サトウ ケンタ</div></td><td>アルバイト</td><td>従業員</td><td><span class=tag>レジ</span></td><td>sato@example.com</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="#err-shift">削除</a></td></tr><tr><td><b>鈴木 花</b><div class="muted">スズキ ハナ</div></td><td>アルバイト</td><td>従業員</td><td><span class=tag>調理</span></td><td>suzuki@example.com</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr><tr><td><b>高橋 悠</b><div class="muted">タカハシ ユウ</div></td><td>アルバイト</td><td>従業員</td><td><span class=tag>レジ</span><span class=tag>調理</span></td><td>takahashi@example.com</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr><tr><td><b>伊藤 大和</b><div class="muted">イトウ ヤマト</div></td><td>アルバイト</td><td>従業員</td><td><span class=tag>レジ</span></td><td>ito@example.com</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr><tr><td><b>渡辺 結衣</b><div class="muted">ワタナベ ユイ</div></td><td>アルバイト</td><td>従業員</td><td><span class=tag>調理</span></td><td>watanabe@example.com</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr><tr><td><b>山本 蓮</b><div class="muted">ヤマモト レン</div></td><td>アルバイト</td><td>従業員</td><td><span class=tag>レジ</span><span class=tag>調理</span></td><td>yamamoto@example.com</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr></tbody></table></div>
+  <p class="muted" style="margin-top:10px">全9名</p>
+</section>
+<div class="protonote no-print"><b>代替フローの表示確認（プロトタイプ用）</b><br><a href="#err-self">本人・最後の管理者を削除しようとした</a><a href="#err-shift">今後のシフトに割り当てがある従業員を削除しようとした</a><br><a href="#" style="margin-top:4px;display:inline-block">表示を閉じる</a></div>
+  </main>
+</div>
+</body>
+</html>

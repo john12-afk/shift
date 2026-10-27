@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>サインアップ | らくらくシフト登録</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="m-top"><a class="brand" href="login.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト登録</a></div>
+<main class="center-shell">
+
+<span class="uc">UC サインアップ</span>
+<h1 style="margin:8px 0 6px">サインアップ</h1>
+<p class="muted" style="margin-bottom:18px">管理者の情報を登録します。</p>
+<div class="alt note ng" id="err-required" role="alert">未入力の項目があります。氏名、フリガナ、従業員区分、入社日、メールアドレス、電話番号を入力してください。</div>
+
+<section class="panel"><div class="form-grid">
+  <div class="field"><label for="s1">氏名<span class="req">必須</span></label><input id="s1" type="text"></div>
+  <div class="field"><label for="s2">フリガナ<span class="req">必須</span></label><input id="s2" type="text"></div>
+  <div class="field"><label for="s3">従業員区分<span class="req">必須</span></label><select id="s3"><option>社員</option><option>アルバイト</option></select></div>
+  <div class="field"><label for="s4">入社日<span class="req">必須</span></label><input id="s4" type="date"></div>
+  <div class="field"><label for="s5">メールアドレス<span class="req">必須</span></label><input id="s5" type="email"></div>
+  <div class="field"><label for="s6">電話番号<span class="req">必須</span></label><input id="s6" type="text" placeholder="090-0000-0000"></div>
+</div>
+<div class="form-actions" style="margin-top:18px"><a class="btn" href="login.html">ログイン画面へ戻る</a><a class="btn primary" href="login.html#signedup">登録</a></div></section>
+<div class="protonote no-print"><b>代替フローの表示確認（プロトタイプ用）</b><br><a href="#err-required">未入力の項目がある</a><br><a href="#" style="margin-top:4px;display:inline-block">表示を閉じる</a></div>
+</main>
+</body>
+</html>
