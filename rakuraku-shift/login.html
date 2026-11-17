@@ -12,7 +12,7 @@
     <div>
       <a class="brand" style="padding:0" href="login.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト登録</a>
       <h1>シフト作成の調整時間を、短く。</h1>
-      <p>希望休と勤務希望を集めて、必要人数・連勤・スキルを考慮したシフト案を自動で作ります。店長は確認と微調整だけ。</p>
+      <p>希望休と勤務希望を集めて、必要人数・連勤を考慮したシフト案を自動で作ります。店長は確認と微調整だけ。</p>
       <div class="week" aria-hidden="true">
         <span>従業員A</span><i class="b e"></i><i class="b e"></i><i class="b o"></i><i class="b e"></i><i class="b r"></i><i class="b e"></i><i class="b o"></i>
         <span>従業員B</span><i class="b l"></i><i class="b o"></i><i class="b l"></i><i class="b l"></i><i class="b o"></i><i class="b l"></i><i class="b l"></i>
@@ -25,17 +25,19 @@
     <div class="in">
       <h2 style="font-size:1.35rem;margin-bottom:20px">ログイン</h2>
       <div class="alt note ok" id="loggedout" role="status">ログアウトしました。</div>
-      <div class="alt note ok" id="signedup" role="status">登録が完了しました。ログインしてください。</div>
+      <div class="alt note ok" id="signedup" role="status">登録が完了しました。会社コードは「<b style="letter-spacing:.12em">K7M4QX</b>」です。ログインのときに必要になるので、控えておいてください。（登録したメールアドレスにも送信しました）</div>
       <div class="alt note ok" id="pwchanged" role="status">パスワードを変更しました。新しいパスワードでログインしてください。</div>
-      <div class="alt note ng" id="err-auth" role="alert">メールアドレスまたはパスワードが正しくありません。</div>
-      <div class="alt note ng" id="err-empty" role="alert">メールアドレスとパスワードを入力してください。</div>
+      <div class="alt note ng" id="err-auth" role="alert">会社コード、メールアドレスまたはパスワードが正しくありません。</div>
+      <div class="alt note ng" id="err-empty" role="alert">会社コード、メールアドレス、パスワードを入力してください。</div>
+      <div class="field"><label for="cc">会社コード</label><input id="cc" type="text" name="company_code" maxlength="6" autocomplete="organization" autocapitalize="characters" spellcheck="false" style="text-transform:uppercase;letter-spacing:.12em" value="K7M4QX"><p class="hint">サインアップ時に発行された6文字のコード</p></div>
+      <label style="display:flex;align-items:center;gap:8px;margin:-6px 0 16px;font-size:.88rem"><input type="checkbox" name="remember_company_code" checked>会社コードを保存する</label>
       <div class="field"><label for="uid">メールアドレス</label><input id="uid" type="email" autocomplete="username" value="kido@example.com"></div>
       <div class="field"><label for="pw">パスワード</label><input id="pw" type="password" autocomplete="current-password" value="password"></div>
       <a class="btn primary lg" style="display:block;text-align:center" href="admin/select.html">ログイン</a>
       <p style="margin-top:12px;text-align:center"><a href="verify.html">パスワードを忘れた場合</a></p>
-      <a class="btn" style="display:block;text-align:center;margin-top:10px" href="signup.html">サインアップ（管理者の新規登録）</a>
+      <a class="btn" style="display:block;text-align:center;margin-top:10px" href="signup.html">新しく会社を登録する</a>
       <div class="demo">
-        
+
       </div>
       <div class="protonote" style="margin-top:20px"><b>代替フローの表示確認</b><br>
         <a href="#err-auth">認証失敗</a><a href="#err-empty">未入力</a><a href="#loggedout">ログアウト後</a><a href="#pwchanged">パスワード変更後</a><a href="#signedup">サインアップ後</a></div>

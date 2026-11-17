@@ -10,14 +10,30 @@
 <div class="app">
   <aside class="side">
     <a class="brand" href="menu.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト</a>
-    <a class="nav" href="menu.html">管理者メニュー</a><div class="grp">従業員管理</div><a class="nav" href="employee-list.html">従業員一覧（変更・削除）</a><a class="nav on" href="employee-new.html">従業員登録</a><div class="grp">シフト作成</div><a class="nav" href="conditions.html">勤務条件設定</a><a class="nav" href="shift-generate.html">シフト自動作成</a><a class="nav" href="reminder-result.html">出勤催促メールの結果確認</a><a class="nav" href="approval.html">催促承認</a><div class="grp">シフト管理</div><a class="nav" href="shift-view.html">シフト確認</a><a class="nav" href="shift-edit.html">シフト修正</a><a class="nav" href="shift-confirm.html">シフト確定</a><a class="nav" href="shift-export.html">シフト表出力</a>
-    <div class="who"><b>木戸 愛翔 さん</b>管理者<br><a href="select.html">画面を切り替える</a>　<a href="../login.html#loggedout">ログアウト</a></div>
+    <a class="nav" href="menu.html">管理者メニュー</a><div class="grp">従業員管理</div><a class="nav on" href="employee-list.html">従業員一覧（変更・削除）</a><a class="nav" href="employee-new.html">従業員登録</a><div class="grp">シフト作成</div><a class="nav" href="conditions.html">勤務条件設定</a><a class="nav" href="shift-generate.html">シフト自動作成</a><a class="nav" href="reminder-result.html">出勤催促メールの結果確認</a><a class="nav" href="approval.html">催促承認</a><div class="grp">シフト管理</div><a class="nav" href="shift-view.html">シフト確認</a><a class="nav" href="shift-edit.html">シフト修正</a><a class="nav" href="shift-confirm.html">シフト確定</a><a class="nav" href="shift-export.html">シフト表出力</a>
+    <div class="who"><b>木戸 愛翔 さん</b><a href="select.html">画面を切り替える</a>　<a href="../login.html#loggedout">ログアウト</a></div>
   </aside>
   <main class="main">
-    <div class="crumb"><span class="uc">UC 管理者・従業員登録</span></div>
-    <div class="head"><div><h1>登録情報</h1></div><div class="actions"></div></div>
-<section class="panel done"><div class="ic">✓</div><h2>従業員を登録しました</h2><p>登録した内容を確認してください。</p><dl class="kv"><dt>氏名</dt><dd>高橋 悠（タカハシ ユウ）</dd><dt>従業員区分</dt><dd>アルバイト</dd><dt>メールアドレス</dt><dd>takahashi@example.com</dd><dt>電話番号</dt><dd>090-1234-5678</dd><dt>権限</dt><dd>従業員</dd><dt>スキル</dt><dd>レジ、調理</dd><dt>勤務上限</dt><dd>週4日／月100時間</dd></dl><div class="actions"><a class="btn" href="employee-new.html">続けて登録する</a><a class="btn primary" href="employee-list.html">従業員一覧へ</a></div></section>
+    <div class="crumb"><span class="uc">UC 従業員情報変更・従業員削除</span></div>
+    <div class="head"><div><h1>従業員一覧</h1><p class="sub">変更・削除する従業員を選びます（区分で絞り込めます）</p></div><div class="actions"><a class="btn primary" href="employee-new.html">従業員を登録</a></div></div>
+
+<div class="alt note ng" id="err-self" role="alert">ログイン中の本人、または管理者権限を持つ最後の1人は削除できません。</div>
+
+<div class="alt note ng" id="err-shift" role="alert">今後のシフト（未確定・確定済み）に割り当てられている従業員は削除できません。シフトを修正してから削除してください。<br><a href="shift-edit.html">シフト修正へ</a></div>
+
+<section class="panel">
+  <div class="inline" style="margin-bottom:14px">
+    <select style="max-width:170px" aria-label="区分で絞り込み"><option>区分：すべて</option><option>社員</option><option>アルバイト</option></select>
+    <a class="btn" href="#">絞り込む</a>
+  </div>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>氏名</th><th>区分</th><th>権限</th><th>電話番号</th><th>メールアドレス</th><th></th></tr></thead>
+    <tbody><tr><td><b>木戸 愛翔</b><div class="muted">キド アイト</div></td><td>社員</td><td>管理者</td><td>090-1111-2222</td><td>kido@example.com</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="#err-self">削除</a></td></tr><tr><td><b>松岡 玲</b><div class="muted">マツオカ レイ</div></td><td>社員</td><td>管理者</td><td>080-2345-6789</td><td>matsuoka@example.com</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr><tr><td><b>田中 美咲</b><div class="muted">タナカ ミサキ</div></td><td>社員</td><td>従業員</td><td>090-3456-7890</td><td>tanaka@example.com</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr><tr><td><b>佐藤 健太</b><div class="muted">サトウ ケンタ</div></td><td>アルバイト</td><td>従業員</td><td>070-4567-8901</td><td>sato@example.com</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="#err-shift">削除</a></td></tr><tr><td><b>鈴木 花</b><div class="muted">スズキ ハナ</div></td><td>アルバイト</td><td>従業員</td><td>080-5678-9012</td><td>suzuki@example.com</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr><tr><td><b>高橋 悠</b><div class="muted">タカハシ ユウ</div></td><td>アルバイト</td><td>従業員</td><td>090-1234-5678</td><td>takahashi@example.com</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr><tr><td><b>伊藤 大和</b><div class="muted">イトウ ヤマト</div></td><td>アルバイト</td><td>従業員</td><td>070-6789-0123</td><td>ito@example.com</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr><tr><td><b>渡辺 結衣</b><div class="muted">ワタナベ ユイ</div></td><td>アルバイト</td><td>従業員</td><td>080-7890-1234</td><td>watanabe@example.com</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr><tr><td><b>山本 蓮</b><div class="muted">ヤマモト レン</div></td><td>アルバイト</td><td>従業員</td><td>090-8901-2345</td><td>yamamoto@example.com</td><td class="num"><a class="btn sm" href="employee-edit.html">変更</a> <a class="btn sm danger" href="employee-delete.html">削除</a></td></tr></tbody></table></div>
+  <p class="muted" style="margin-top:10px">全9名</p>
+</section>
   </main>
 </div>
+
+<div class="modal show" role="dialog" aria-modal="true" aria-labelledby="done-title"><div class="box alert"><div class="ic">✓</div><h2 id="done-title">従業員を登録しました</h2><p class="sub">登録した内容を確認してください。</p><table class="kvt"><tbody><tr><th>氏名</th><td>高橋 悠（タカハシ ユウ）</td></tr><tr><th>従業員区分</th><td>アルバイト</td></tr><tr><th>メールアドレス</th><td>takahashi@example.com</td></tr><tr><th>電話番号</th><td>090-1234-5678</td></tr><tr><th>権限</th><td>従業員</td></tr></tbody></table><div class="form-actions"><a class="btn" href="employee-new.html">続けて登録する</a><a class="btn primary" href="employee-list.html">OK</a></div></div></div>
 </body>
 </html>

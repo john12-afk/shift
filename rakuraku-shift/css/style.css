@@ -88,7 +88,7 @@ table.tbl{width:100%;border-collapse:collapse;font-size:.9rem}
 .field label,.field .lbl{display:block;font-weight:700;font-size:.88rem;margin-bottom:4px}
 .field .req{color:var(--danger-t);font-size:.78rem;margin-left:6px;font-weight:400}
 .field .hint{font-size:.8rem;color:var(--ink-3);margin-top:3px}
-input[type=text],input[type=email],input[type=password],input[type=number],input[type=date],input[type=file],select,textarea{
+input[type=text],input[type=email],input[type=tel],input[type=password],input[type=number],input[type=date],input[type=file],select,textarea{
   width:100%;padding:8px 10px;border:1px solid #b9c2cd;border-radius:5px;font:inherit;background:#fff;color:var(--ink)}
 input[type=number]{width:84px;text-align:right}
 textarea{min-height:76px;resize:vertical}
@@ -266,3 +266,106 @@ table.sg{border-collapse:separate;border-spacing:0;font-size:.82rem;width:max-co
 .big-choice a b{display:block;font-size:1.15rem;color:var(--brand-d);margin-bottom:4px}
 .big-choice a:hover{border-color:var(--brand);background:#f7fbfa}
 @media (max-width:600px){.big-choice{grid-template-columns:1fr}}
+/* ---------- 会社コード（管理者メニューのサイドメニュー下部） ---------- */
+.side .who .cc{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:10px;font-size:.78rem}
+.side .who .cc code{font-family:inherit;font-weight:700;font-size:.95rem;color:#fff;letter-spacing:.12em}
+.side .who a.cc-copy{border:1px solid #5fd0c4;border-radius:4px;padding:1px 7px;font-size:.72rem;text-decoration:none}
+.side .who .cc-msg{margin:0;width:100%;color:#9fd8d1;font-size:.75rem}
+.side .who .cc-msg:target{display:block}
+/* ---------- 完了アラート（遷移先の画面に重ねて表示） ---------- */
+.modal.show{display:flex}
+.modal .box.alert{max-width:480px;text-align:center;padding:26px 26px 22px}
+.modal .box.alert .ic{width:48px;height:48px;border-radius:50%;background:var(--ok);color:var(--ok-t);display:inline-flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:700;margin-bottom:10px}
+.modal .box.alert h2{font-size:1.15rem;margin-bottom:4px}
+.modal .box.alert .sub{color:var(--ink-2);font-size:.88rem}
+.modal .box.alert .form-actions{justify-content:center}
+table.kvt{width:100%;border-collapse:collapse;margin-top:14px;font-size:.9rem;text-align:left}
+.kvt th,.kvt td{padding:8px 10px;border-top:1px solid var(--line-2)}
+.kvt tr:last-child th,.kvt tr:last-child td{border-bottom:1px solid var(--line-2)}
+.kvt th{font-weight:400;color:var(--ink-2);width:38%}
+.kvt thead th{background:#f5f7f9;font-weight:700;color:var(--ink-2);width:auto}
+.modal .box.alert .foot{font-size:.84rem;color:var(--ink-2);text-align:left;margin-top:10px}
+/* ---------- シフトの状況（3段階） ---------- */
+.stage{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line-2);margin-top:10px}
+.stage>div{padding:8px 8px 10px}
+.stage b{display:block;font-size:.9rem;color:var(--ink)}
+.stage span{font-size:.82rem;color:var(--ink-2)}
+.stage .now{background:var(--brand-l)}
+.stage .now b{color:var(--brand-d)}
+/* ---------- 日別シフトのグラフ（9:00〜22:00 の横棒） ---------- */
+.panel-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.datepick{display:inline-flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:6px;padding:5px 12px;background:#fff;font-size:.88rem}
+.datepick a{text-decoration:none;color:var(--ink);font-size:.8rem}
+.gantt{margin-top:10px;font-size:.88rem}
+.gantt .row{display:grid;grid-template-columns:92px 1fr;align-items:center;border-bottom:1px solid var(--line-2);min-height:35px}
+.gantt .row>.nm{padding-left:6px}
+.gantt .row.axis{border-bottom:0;min-height:22px;color:var(--ink-3);font-size:.78rem}
+.gantt .track{position:relative;height:35px}
+.gantt .axis .track{height:22px}
+.gantt .axis .track span{position:absolute;top:2px;transform:translateX(-50%)}
+.gantt .bar{position:absolute;top:4px;bottom:4px;border-radius:3px;color:#fff;font-weight:700;font-size:.78rem;padding:0 7px;display:flex;align-items:center;white-space:nowrap;overflow:hidden}
+.gantt .bar.e{background:var(--brand)}
+.gantt .bar.l{background:#2f6fc4}
+.gantt .bar.short{background:var(--danger);color:var(--danger-t);border:1px solid var(--danger-t);font-weight:400}
+.gantt .row.lack .nm{color:var(--danger-t);font-weight:700}
+.gantt-legend{display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:.78rem;color:var(--ink-2);margin-top:10px}
+.gantt-legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:-1px}
+.slot{display:inline-block;padding:0 6px;border-radius:4px;font-size:.76rem;font-weight:700;line-height:1.6}
+.slot.e{background:var(--early);color:var(--early-t)}
+.slot.l{background:var(--late);color:var(--late-t)}
+.m-top .links{display:flex;gap:18px}
+.m-top .links a{color:#9fd8d1;font-size:.85rem;text-decoration:none}
+/* ---------- 管理者メニュー：シフトの完成状況 ---------- */
+.menu-cols{display:grid;grid-template-columns:290px minmax(0,1fr);gap:16px;align-items:start}
+.comp .pct{font-size:1.6rem;font-weight:700;color:var(--brand-d);line-height:1.1}
+.comp .pct small{font-size:.85rem;color:var(--ink-2);font-weight:700;margin-left:4px}
+.comp .bar-out{height:8px;border-radius:4px;background:var(--line-2);margin:6px 0 4px;overflow:hidden}
+.comp .bar-out i{display:block;height:100%;background:var(--brand)}
+.comp .gaps{list-style:none;padding:0;margin:6px 0 0;font-size:.88rem}
+.comp .gaps li{padding:2px 0}
+.comp h3.ng{color:var(--danger-t);font-size:.9rem;margin-top:10px}
+.kpis a.lk{color:var(--danger-t);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:1100px){.menu-cols{grid-template-columns:1fr}}
+/* ---------- 勤務希望登録：1つのカレンダー ---------- */
+table.reqcal{width:100%;border-collapse:collapse;table-layout:fixed;font-size:.85rem;margin-top:10px}
+.reqcal th{background:#f5f7f9;border:1px solid var(--line-2);padding:5px 0;font-weight:700}
+.reqcal th.su{color:var(--sun)}.reqcal th.sa{color:var(--sat)}
+.reqcal td{border:1px solid var(--line-2);height:52px;vertical-align:top;padding:0}
+.reqcal td a{display:block;height:100%;padding:4px 7px;color:var(--ink);text-decoration:none}
+.reqcal td a:hover{outline:2px solid var(--brand);outline-offset:-2px}
+.reqcal td small{display:block;font-size:.72rem;color:var(--ink-2)}
+.reqcal td.w{background:#e2ebfb}
+.reqcal td.o{background:#fbe3e3}
+.reqcal td.su a{color:var(--sun)}
+.cal-legend{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:.78rem;color:var(--ink-2);margin-top:8px}
+.cal-legend .k{display:inline-block;padding:0 6px;border-radius:3px;font-weight:700}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap}
+/* ---------- 時間帯を決める（1日ずつ・まとめて）・デフォルト ---------- */
+.narrow{max-width:830px;margin:0 auto}
+.radio-rows .r{display:grid;grid-template-columns:150px 1fr;align-items:center;border-top:1px solid var(--line-2);padding:9px 12px}
+.radio-rows .r:last-child{border-bottom:1px solid var(--line-2)}
+.radio-rows .opts{gap:8px 22px}
+.pickcal{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:6px}
+.pickcal .h{text-align:center;font-weight:700;font-size:.85rem}
+.pickcal .h.su{color:var(--sun)}.pickcal .h.sa{color:var(--sat)}
+.pickcal .d{min-height:62px;border:1px dashed var(--line);border-radius:6px;background:#f7f8fa;color:#b4bcc6;padding:6px 10px;font-size:.9rem}
+.pickcal .d.can{border:1px solid #2f6fc4;background:#fff;color:#1c4a94}
+.pickcal .d.sel{background:#dce8fb;font-weight:700}
+.pickcal .d small{display:block;font-size:.72rem;font-weight:700}
+.tbl select:disabled{background:#eef0f3;color:#9aa4b1}
+/* ---------- 従業員：自分のシフト（日付ごとのリスト） ---------- */
+.mylist{margin-top:12px;border-top:1px solid var(--line-2)}
+.mylist .li{display:flex;justify-content:space-between;align-items:center;padding:6px 12px;border-bottom:1px solid var(--line-2)}
+.mylist .rt{display:flex;align-items:center;gap:12px;min-width:220px}
+.mylist .rt .badge,.mylist .rt .slot{min-width:62px;text-align:center}
+.mylist .tm{color:var(--ink-2);font-size:.9rem}
+.sg tr.me td{background-color:#eef7f5}
+.sg tr.me td.nm{box-shadow:inset 3px 0 0 var(--brand)}
+/* ---------- 従業員：出勤催促（まとめて回答） ---------- */
+.offer{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 20px;align-items:center;padding:16px 20px}
+.offer .d{font-size:1rem;font-weight:700}
+.offer .opts{gap:6px 16px}
+/* ---------- 勤務条件設定：必要人数表 ---------- */
+.tbl.need th.sm{font-size:.74rem;font-weight:400;color:var(--ink-3);padding:2px 8px}
+.tbl.need td{padding:3px 6px}
+.tbl.need input[type=number]{width:52px;padding:3px 6px;text-align:center}

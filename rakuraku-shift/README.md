@@ -13,29 +13,31 @@ JavaScript は使っていません。ダイアログ・代替フローの表示
 
 ## ユースケースと画面の対応
 
+※画面設計書（207-3）の改訂に合わせて更新済み。完了画面（○○-done など）は、遷移先の画面に重ねて表示する完了アラートとして作っています。
+
 | ユースケース | アクター | 画面（基本フローの順） |
 |---|---|---|
-| ログイン | 管理者・従業員 | login.html → （管理者）admin/select.html／（従業員）employee/menu.html |
-| サインアップ | 管理者 | login.html「サインアップ」→ signup.html → login.html（登録完了の表示） |
+| ログイン | 管理者・従業員 | login.html（会社コード・メールアドレス・パスワード） → （管理者）admin/select.html／（従業員）employee/menu.html |
+| サインアップ | 管理者 | login.html「新しく会社を登録する」→ signup.html（会社名・管理者情報）→ login.html（登録完了と会社コードの表示） |
 | 本人確認 | 管理者・従業員 | login.html「パスワードを忘れた場合」→ verify.html → verify-otp.html |
 | パスワード変更 | 管理者・従業員 | password-change.html → login.html（変更完了の表示） |
 | 管理者画面選択 | 管理者 | admin/select.html → 管理者メニュー／従業員メニュー |
 | 管理者メニュー | 管理者 | admin/menu.html |
 | 従業員メニュー | 従業員 | employee/menu.html |
 | ログアウト | 管理者・従業員 | 各画面の「ログアウト」→ login.html |
-| 管理者・従業員登録 | 管理者 | employee-new → employee-registered →（続けて登録／一覧へ） |
-| 従業員情報変更 | 管理者 | employee-list（区分・スキルで絞り込み）→ employee-edit → employee-updated → 一覧へ |
-| 従業員削除 | 管理者 | employee-list → employee-delete（元に戻せない旨）→ employee-deleted → 一覧へ |
-| 勤務希望登録（休日希望を含む） | 従業員 | employee/request → request-done（期限後は request-closed） |
-| 勤務条件設定 | 管理者 | conditions → conditions-done |
+| 管理者・従業員登録 | 管理者 | employee-new → employee-list に完了アラート（employee-registered） |
+| 従業員情報変更 | 管理者 | employee-list（区分で絞り込み）→ employee-edit → employee-list に完了アラート（employee-updated） |
+| 従業員削除 | 管理者 | employee-list → employee-delete（元に戻せない旨）→ employee-list に完了アラート（employee-deleted） |
+| 勤務希望登録（休日希望を含む） | 従業員 | employee/request（1つのカレンダー）→ 時間帯は work-time-each（1日ずつ）／work-time-bulk（まとめて）、default-shift（デフォルト登録）→ メニューに完了アラート（request-done）。期限後は request-closed |
+| 勤務条件設定 | 管理者 | conditions（シフト枠・曜日×枠の必要人数・例外日・前の期間からコピー）→ 管理者メニューに完了アラート（conditions-done） |
 | シフト自動作成 | 管理者 | shift-generate（結果・充足率・不足枠）→ shift-view |
 | 出勤催促メール | システム | シフト自動作成の結果から自動送信（画面は reminder-result で確認） |
 | 出勤催促メールの結果確認 | 管理者 | reminder-result → 催促承認へ／シフト修正へ |
-| 従業員出勤催促承諾 | 従業員 | employee/offer → offer-done（承認待ち） |
+| 従業員出勤催促承諾 | 従業員 | employee/offer（まとめて回答）→ メニューに完了アラート（offer-done） |
 | 催促承認 | 管理者 | approval → approval-approve／approval-reject（確認）→ shift-view／approval |
-| シフト確認 | 管理者・従業員 | admin/shift-view（作成中も可）、employee/shift（確定・公開済みのみ） |
-| シフト修正 | 管理者 | shift-edit → shift-edit-done（確定後は確認ダイアログ） |
-| シフト確定 | 管理者 | shift-view「確定へ進む」→ shift-confirm（確定確認）→ shift-confirmed |
+| シフト確認 | 管理者・従業員 | admin/shift-view（作成中も可）、employee/shift（自分のシフトを日付ごとのリストで）→ employee/shift-all（全員のシフト表） |
+| シフト修正 | 管理者 | shift-edit（複数セルを直してから保存）→ シフト修正画面に完了アラート（shift-edit-done）。確定後は確認ダイアログ |
+| シフト確定 | 管理者 | shift-view「確定へ進む」→ shift-confirm（確定確認）→ シフト確認画面に完了アラート（shift-confirmed） |
 | シフト表出力 | 管理者 | shift-export（期間・Excel/PDF） |
 
 ## ユースケース図②との照合結果

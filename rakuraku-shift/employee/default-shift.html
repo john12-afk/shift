@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>デフォルトシフト登録 | らくらくシフト登録</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="m-top"><a class="brand" href="menu.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト</a><div class="links"><a href="../login.html#loggedout">ログアウト</a></div></div>
+<nav class="m-nav"><a href="menu.html">メニュー</a><a class="on" href="request.html">勤務希望</a><a href="shift.html">シフト</a><a href="offer.html">出勤催促</a></nav>
+<main class="m-main">
+
+<div class="narrow">
+<span class="uc">UC デフォルトシフト登録</span>
+<h1 style="margin-top:8px">デフォルトのシフトを登録</h1>
+<p class="muted" style="margin-bottom:12px">曜日ごとの希望と時間帯を登録しておくと、勤務希望登録画面でカレンダーに反映できます。</p>
+<div class="alt note ng" id="err-time" role="alert">出たい曜日の時間帯が選ばれていません。時間帯を選んでください。</div>
+<section class="panel" style="padding:10px 24px">
+  <table class="tbl"><thead><tr><th style="width:110px">曜日</th><th>希望</th><th>時間帯（出たい曜日のみ）</th></tr></thead><tbody><tr><td><b style="color:var(--sun)">日曜日</b></td><td><select name="default_status_0" aria-label="日曜日の希望"><option selected>未設定</option><option>出たい</option><option>休みたい</option></select></td><td><select name="default_time_0" aria-label="日曜日の時間帯" disabled><option>選べません</option></select></td></tr><tr><td><b>月曜日</b></td><td><select name="default_status_1" aria-label="月曜日の希望"><option>未設定</option><option selected>出たい</option><option>休みたい</option></select></td><td><select name="default_time_1" aria-label="月曜日の時間帯"><option>早番 9:00–17:00</option><option selected>遅番 14:00–22:00</option><option>どちらでもよい</option></select></td></tr><tr><td><b>火曜日</b></td><td><select name="default_status_2" aria-label="火曜日の希望"><option selected>未設定</option><option>出たい</option><option>休みたい</option></select></td><td><select name="default_time_2" aria-label="火曜日の時間帯" disabled><option>選べません</option></select></td></tr><tr><td><b>水曜日</b></td><td><select name="default_status_3" aria-label="水曜日の希望"><option>未設定</option><option selected>出たい</option><option>休みたい</option></select></td><td><select name="default_time_3" aria-label="水曜日の時間帯"><option>早番 9:00–17:00</option><option selected>遅番 14:00–22:00</option><option>どちらでもよい</option></select></td></tr><tr><td><b>木曜日</b></td><td><select name="default_status_4" aria-label="木曜日の希望"><option selected>未設定</option><option>出たい</option><option>休みたい</option></select></td><td><select name="default_time_4" aria-label="木曜日の時間帯" disabled><option>選べません</option></select></td></tr><tr><td><b>金曜日</b></td><td><select name="default_status_5" aria-label="金曜日の希望"><option selected>未設定</option><option>出たい</option><option>休みたい</option></select></td><td><select name="default_time_5" aria-label="金曜日の時間帯" disabled><option>選べません</option></select></td></tr><tr><td><b style="color:var(--sat)">土曜日</b></td><td><select name="default_status_6" aria-label="土曜日の希望"><option>未設定</option><option>出たい</option><option selected>休みたい</option></select></td><td><select name="default_time_6" aria-label="土曜日の時間帯" disabled><option>選べません</option></select></td></tr></tbody></table>
+</section>
+<div class="form-actions"><a class="btn" href="request.html">戻る</a><a class="btn primary" href="request.html#default-saved">登録する</a></div>
+<div class="protonote no-print"><b>代替フローの表示確認（プロトタイプ用）</b><br><a href="#err-time">出たい曜日の時間帯が選ばれていない</a><br><a href="#" style="margin-top:4px;display:inline-block">表示を閉じる</a></div>
+</div>
+</main>
+</body>
+</html>
