@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>勤務時間帯設定（まとめて） | らくらくシフト登録</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="m-top"><a class="brand" href="menu.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト</a><div class="links"><a href="../login.html#loggedout">ログアウト</a></div></div>
+<nav class="m-nav"><a href="menu.html">メニュー</a><a class="on" href="request.html">勤務希望</a><a href="shift.html">シフト</a><a href="offer.html">出勤催促</a></nav>
+<main class="m-main">
+
+<div class="narrow">
+<span class="uc">UC 勤務時間帯設定（まとめて）</span>
+<h1 style="margin-top:8px">時間帯をまとめて決める</h1>
+<p class="muted" style="margin-bottom:12px">2026年11月分　日付を選んでから時間帯を選び、「選んだ日に設定」を押してください。</p>
+<div class="alt note" id="warn-nowork" role="alert">出たい日が選ばれていません。勤務希望登録画面で出たい日を選んでください。</div>
+<div class="alt note ng" id="err-nodate" role="alert">時間帯を決める日付が選ばれていません。日付を選んでください。</div>
+<section class="panel" style="padding:18px 24px">
+  <div class="panel-head"><h2 style="font-size:1rem">① 日付を選ぶ（出たい日のみ）</h2><div class="btn-row"><a class="btn sm" href="#">すべて選ぶ</a><a class="btn sm" href="#">選択解除</a></div></div>
+  <div class="pickcal"><div class="h su">日</div><div class="h">月</div><div class="h">火</div><div class="h">水</div><div class="h">木</div><div class="h">金</div><div class="h sa">土</div><div class="d">1</div><div class="d can sel">2<small>✓選択中</small></div><div class="d">3</div><div class="d can sel">4<small>✓選択中</small></div><div class="d">5</div><div class="d">6</div><div class="d">7</div><div class="d">8</div><div class="d can sel">9<small>✓選択中</small></div><div class="d">10</div><div class="d can sel">11<small>✓選択中</small></div><div class="d">12</div><div class="d">13</div><div class="d">14</div><div class="d">15</div><div class="d can">16<small>早番</small></div><div class="d">17</div><div class="d can">18<small>早番</small></div><div class="d">19</div><div class="d">20</div><div class="d">21</div><div class="d">22</div><div class="d can">23<small>早番</small></div><div class="d">24</div><div class="d can">25<small>どちらでも</small></div><div class="d">26</div><div class="d">27</div><div class="d">28</div><div class="d">29</div><div class="d can">30<small>どちらでも</small></div></div>
+  <h2 style="font-size:1rem;margin-top:18px">② 時間帯を選ぶ</h2>
+  <div class="opts" style="margin-top:6px"><label><input type="radio" name="bulk_work_time"> 早番 9:00–17:00</label><label><input type="radio" name="bulk_work_time" checked> 遅番 14:00–22:00</label><label><input type="radio" name="bulk_work_time"> どちらでもよい</label></div>
+  <div class="inline" style="margin-top:12px"><a class="btn primary sm" href="#">選んだ日に設定（4日）</a><span class="muted">設定状況：早番 3日／遅番 4日／どちらでもよい 2日</span></div>
+</section>
+<div class="form-actions"><a class="btn" href="request.html">戻る</a><a class="btn primary" href="request.html">決定</a></div>
+<div class="protonote no-print"><b>代替フローの表示確認（プロトタイプ用）</b><br><a href="#warn-nowork">出たい日が1日も選ばれていない</a><a href="#err-nodate">日付を選ばずに設定を押した</a><br><a href="#" style="margin-top:4px;display:inline-block">表示を閉じる</a></div>
+</div>
+</main>
+</body>
+</html>

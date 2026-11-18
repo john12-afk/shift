@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ワンタイムパスワードの入力 | らくらくシフト登録</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="m-top"><a class="brand" href="login.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト登録</a></div>
+<main class="center-shell">
+
+<h1 style="margin-bottom:6px">ワンタイムパスワードの入力</h1>
+<p class="muted" style="margin-bottom:18px">kido@example.com に送信しました。制限時間内に入力してください。</p>
+<div class="alt note ng" id="err-otp" role="alert">ワンタイムパスワードが違います</div>
+
+<div class="alt note ng" id="err-time" role="alert">制限時間が過ぎたのでもう一度やり直してください<br><a class="btn sm" href="#resent" style="margin-top:8px">ワンタイムパスワード再送信</a></div>
+
+<div class="alt note ok" id="resent" role="alert">ワンタイムパスワードを再送信しました。</div>
+
+<section class="panel">
+  <p style="margin-bottom:10px">制限時間：<span class="timer">残り 09:41</span></p>
+  <div class="field"><label for="o">ワンタイムパスワード</label><input id="o" class="otp" type="text" inputmode="numeric" maxlength="6" placeholder="000000"></div>
+  <div class="form-actions" style="margin-top:16px"><a class="btn" href="verify.html">戻る</a><a class="btn primary" href="password-change.html">確認</a></div>
+</section>
+<div class="protonote no-print"><b>代替フローの表示確認（プロトタイプ用）</b><br><a href="#err-otp">未入力・違うパスワード</a><a href="#err-time">制限時間切れ（再送信ボタンを表示）</a><a href="#resent">再送信後</a><br><a href="#" style="margin-top:4px;display:inline-block">表示を閉じる</a></div>
+</main>
+</body>
+</html>

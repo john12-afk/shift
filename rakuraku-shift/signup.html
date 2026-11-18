@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>サインアップ | らくらくシフト登録</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="m-top"><a class="brand" href="login.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト登録</a></div>
+<main class="center-shell">
+
+<span class="uc">UC サインアップ</span>
+<h1 style="margin:8px 0 6px">サインアップ</h1>
+<p class="muted" style="margin-bottom:18px">新しく利用する会社（店舗）と、その会社の管理者の情報を登録します。登録すると会社コードが発行されます。</p>
+<div class="alt note ng" id="err-required" role="alert">未入力の項目があります。会社名、姓、名、セイ、メイ、従業員区分、入社日、メールアドレス、電話番号を入力してください。</div>
+<div class="alt note ng" id="err-dup" role="alert">このメールアドレスは既に登録されています。別のメールアドレスを入力してください。</div>
+
+<section class="panel"><div class="form-grid">
+  <div class="field" style="grid-column:1/-1"><label for="s0">会社名（店舗名）<span class="req">必須</span></label><input id="s0" type="text" name="company_name" maxlength="50" placeholder="例：らくらく商店 渋谷店"></div>
+  <div class="field"><label for="s1">姓<span class="req">必須</span></label><input id="s1" type="text" name="last_name"></div>
+  <div class="field"><label for="s1b">名<span class="req">必須</span></label><input id="s1b" type="text" name="first_name"></div>
+  <div class="field"><label for="s2">セイ（フリガナ）<span class="req">必須</span></label><input id="s2" type="text" name="last_name_kana"></div>
+  <div class="field"><label for="s2b">メイ（フリガナ）<span class="req">必須</span></label><input id="s2b" type="text" name="first_name_kana"></div>
+  <div class="field"><label for="s3">従業員区分<span class="req">必須</span></label><select id="s3" name="employee_type"><option>社員</option><option>アルバイト</option></select></div>
+  <div class="field"><label for="s4">入社日<span class="req">必須</span></label><input id="s4" type="date" name="join_date"></div>
+  <div class="field"><label for="s5">メールアドレス<span class="req">必須</span></label><input id="s5" type="email" name="email"></div>
+  <div class="field"><label for="s6">電話番号<span class="req">必須</span></label><input id="s6" type="tel" name="tel" placeholder="090-0000-0000"></div>
+</div>
+<div class="form-actions" style="margin-top:18px"><a class="btn" href="login.html">ログイン画面へ戻る</a><a class="btn primary" href="login.html#signedup">登録</a></div></section>
+<div class="protonote no-print"><b>代替フローの表示確認（プロトタイプ用）</b><br><a href="#err-required">未入力の項目がある</a><a href="#err-dup">メールアドレスが登録済み</a><br><a href="#" style="margin-top:4px;display:inline-block">表示を閉じる</a></div>
+</main>
+</body>
+</html>

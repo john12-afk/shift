@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>勤務希望登録 | らくらくシフト登録</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="m-top"><a class="brand" href="menu.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト</a><div class="links"><a href="../login.html#loggedout">ログアウト</a></div></div>
+<nav class="m-nav"><a href="menu.html">メニュー</a><a class="on" href="request.html">勤務希望</a><a href="shift.html">シフト</a><a href="offer.html">出勤催促</a></nav>
+<main class="m-main">
+
+<h1>勤務希望登録</h1>
+<p class="muted" style="margin-bottom:12px"><b>対象月：2026年11月</b>　提出期限：10/28（水）</p>
+<div class="alt note" id="warn-none" role="alert"><b>警告：希望日が1日も選択されていません。</b>勤務したい日か、休みたい日を選んでください。</div>
+<div class="alt note ng" id="err-late" role="alert">提出期限を過ぎています。登録できませんでした。</div>
+<div class="alt note ng" id="err-nodefault" role="alert">デフォルトのシフトが登録されていません。「デフォルトシフトを登録する」から登録してください。</div>
+<div class="alt note ok" id="default-saved" role="status">デフォルトのシフトを登録しました。</div>
+
+<section class="panel" style="margin-bottom:10px">
+  <h2 style="font-size:.98rem">希望日の登録</h2>
+  <div class="inline" style="margin-top:8px;font-size:.92rem">
+    <div class="opts"><label><input type="radio" name="status" value="work" checked> 出たい日</label><label><input type="radio" name="status" value="off"> 休みたい日</label><label><input type="radio" name="status" value="clear"> 選択解除</label></div>
+    <span class="muted" style="font-size:.8rem">カレンダーの日付をタップして設定</span>
+  </div>
+  <table class="reqcal"><thead><tr><th class="su">日</th><th class="">月</th><th class="">火</th><th class="">水</th><th class="">木</th><th class="">金</th><th class="sa">土</th></tr></thead><tbody><tr><td class="su"><a href="#" aria-label="11月1日">1</a></td><td class="w"><a href="#" aria-label="11月2日">2<small>出たい 遅番</small></a></td><td><a href="#" aria-label="11月3日">3<small style="color:var(--sun)">祝</small></a></td><td class="w"><a href="#" aria-label="11月4日">4<small>出たい 遅番</small></a></td><td><a href="#" aria-label="11月5日">5</a></td><td><a href="#" aria-label="11月6日">6</a></td><td class="o"><a href="#" aria-label="11月7日">7<small>休みたい</small></a></td></tr><tr><td class="su o"><a href="#" aria-label="11月8日">8<small>休みたい</small></a></td><td class="w"><a href="#" aria-label="11月9日">9<small>出たい 遅番</small></a></td><td><a href="#" aria-label="11月10日">10</a></td><td class="w"><a href="#" aria-label="11月11日">11<small>出たい 遅番</small></a></td><td><a href="#" aria-label="11月12日">12</a></td><td><a href="#" aria-label="11月13日">13</a></td><td class="o"><a href="#" aria-label="11月14日">14<small>休みたい</small></a></td></tr><tr><td class="su"><a href="#" aria-label="11月15日">15</a></td><td class="w"><a href="#" aria-label="11月16日">16<small>出たい 早番</small></a></td><td><a href="#" aria-label="11月17日">17</a></td><td class="w"><a href="#" aria-label="11月18日">18<small>出たい 早番</small></a></td><td><a href="#" aria-label="11月19日">19</a></td><td><a href="#" aria-label="11月20日">20</a></td><td class="o"><a href="#" aria-label="11月21日">21<small>休みたい</small></a></td></tr><tr><td class="su"><a href="#" aria-label="11月22日">22</a></td><td class="w"><a href="#" aria-label="11月23日">23<small style="color:var(--sun)">祝</small><small>出たい 早番</small></a></td><td><a href="#" aria-label="11月24日">24</a></td><td class="w"><a href="#" aria-label="11月25日">25<small>出たい どちらでも</small></a></td><td><a href="#" aria-label="11月26日">26</a></td><td><a href="#" aria-label="11月27日">27</a></td><td class="o"><a href="#" aria-label="11月28日">28<small>休みたい</small></a></td></tr><tr><td class="su"><a href="#" aria-label="11月29日">29</a></td><td class="w"><a href="#" aria-label="11月30日">30<small>出たい どちらでも</small></a></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+  <div class="cal-legend"><span><span class="k" style="background:#e2ebfb;color:var(--early-t)">青</span> 出たい日</span><span><span class="k" style="background:#fbe3e3;color:var(--danger-t)">赤</span> 休みたい日</span><span>時間帯は「1日ずつ決める」「まとめて決める」で設定</span></div>
+</section>
+
+<section class="panel">
+  <h2 style="font-size:.98rem;margin-bottom:12px">時間帯を決める（出たい日の時間帯）</h2>
+  <div class="btn-row"><a class="btn" href="work-time-each.html">1日ずつ決める</a><a class="btn" href="work-time-bulk.html">まとめて決める</a><a class="btn" href="#err-nodefault" title="プロトタイプ：デフォルト未登録の場合を表示">デフォルトを反映</a></div>
+  <p style="text-align:center;margin-top:12px"><a href="default-shift.html">デフォルトシフトを登録する</a></p>
+</section>
+
+<div class="btn-row"><a class="btn" href="menu.html">戻る</a><a class="btn primary lg" href="request-done.html">登録する</a></div>
+
+<div class="protonote no-print"><b>代替フローの表示確認（プロトタイプ用）</b><br><a href="#warn-none">希望日が1日も選択されていない（警告）</a><a href="#err-late">提出期限を過ぎて登録した</a><a href="#err-nodefault">デフォルトが未登録で反映を押した</a><a href="#default-saved">デフォルトシフトの登録から戻った</a><br><a href="request-closed.html">提出期限を過ぎてから画面を開いた場合</a><br><a href="#" style="margin-top:4px;display:inline-block">表示を閉じる</a></div>
+</main>
+</body>
+</html>

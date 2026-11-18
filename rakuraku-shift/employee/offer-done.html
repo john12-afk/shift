@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>出勤受付完了 | らくらくシフト登録</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="m-top"><a class="brand" href="menu.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト</a>
+  <div class="links"><a href="../admin/menu.html" title="管理者権限を持つユーザーのときだけ表示">管理者画面へ</a><a href="../login.html#loggedout">ログアウト</a></div></div>
+<nav class="m-nav"><a class="on" href="menu.html">メニュー</a><a href="request.html">勤務希望</a><a href="shift.html">シフト</a><a href="offer.html">出勤催促</a></nav>
+<main class="m-main">
+
+<h1>こんにちは、高橋 悠 さん</h1>
+<p class="muted" style="margin-bottom:14px">11月のシフトの勤務希望を受け付けています。</p>
+<div class="alt note ng" id="err-logout" role="alert">ログアウトできませんでした。もう一度お試しください。</div>
+
+<div class="note" style="margin-bottom:10px"><b>勤務希望の提出期限：10/28（水）</b><br>勤務したい日と、休みたい日を登録してください。</div>
+<div class="note info" style="margin-bottom:10px"><b>出勤のお願いが3件あります</b>（返信期限：10/31（土）18:00）<br><a href="offer.html">内容を見る</a></div>
+<div class="next" style="margin-bottom:10px"><div class="d">次の勤務</div><div class="t">10/27（火）遅番 14:00–22:00</div></div>
+
+<section class="panel" style="margin-bottom:10px;padding:16px 16px 12px">
+  <h2 style="font-size:.98rem">11月分のシフトの状況</h2>
+  <div class="stage">
+    <div class="now"><b>勤務希望受付中</b><span>11月分・提出期限10/28</span></div>
+    <div><b>シフト作成中</b><span>管理者が作成しています</span></div>
+    <div><b>確定済み</b><span>確定後にシフトを確認できます</span></div>
+  </div>
+</section>
+
+<section class="panel" style="padding:14px 16px 14px">
+  <div class="panel-head"><h2 style="font-size:.98rem">10/28（水）のシフト</h2>
+    <span class="datepick"><a href="#" aria-label="前日">◀</a>2026/10/28<a href="#" aria-label="翌日">▶</a></span></div>
+  <div class="gantt">
+    <div class="row axis"><div></div><div class="track"><span style="left:0%;transform:none">9:00</span><span style="left:23.1%">12:00</span><span style="left:46.2%">15:00</span><span style="left:69.2%">18:00</span><span style="left:100%;transform:translateX(-100%)">22:00</span></div></div>
+    <div class="row"><div class="nm">高橋 悠</div><div class="track"><span class="bar l" style="left:38.5%;width:61.5%">遅番 14:00–22:00</span></div></div>
+    <div class="row"><div class="nm">佐藤 健</div><div class="track"><span class="bar e" style="left:0%;width:61.5%">早番 9:00–17:00</span></div></div>
+    <div class="row"><div class="nm">鈴木 結衣</div><div class="track"><span class="bar e" style="left:0%;width:61.5%">早番 9:00–17:00</span></div></div>
+    <div class="row"><div class="nm">田中 蓮</div><div class="track"><span class="bar l" style="left:38.5%;width:61.5%">遅番 14:00–22:00</span></div></div>
+    <div class="row"><div class="nm">山本 大和</div><div class="track"><span class="bar e" style="left:0%;width:61.5%">早番 9:00–17:00</span></div></div>
+  </div>
+  <div class="gantt-legend"><span><i style="background:var(--brand)"></i>早番 9:00–17:00</span><span><i style="background:#2f6fc4"></i>遅番 14:00–22:00</span><span>確定済みのシフトを表示しています</span></div>
+</section>
+</main>
+
+<div class="modal show" role="dialog" aria-modal="true" aria-labelledby="done-title"><div class="box alert"><div class="ic">✓</div><h2 id="done-title">出勤を受け付けました</h2><p class="sub">管理者の承認後にシフトが決まります。<br>承認されるとメールでお知らせします。</p><table class="kvt"><thead><tr><th>日付</th><th>時間帯</th><th>状態</th></tr></thead><tbody><tr><td>11/1（日）</td><td>遅番 14:00〜22:00</td><td><span class="badge warn">承認待ち</span></td></tr><tr><td>11/2（月）</td><td>遅番 14:00〜22:00</td><td><span class="badge warn">承認待ち</span></td></tr><tr><td>11/7（土）</td><td>遅番 14:00〜22:00</td><td><span class="badge warn">承認待ち</span></td></tr></tbody></table><p class="foot">辞退：1件は辞退として記録しました。</p><div class="form-actions"><a class="btn primary" href="menu.html">OK</a></div></div></div>
+</body>
+</html>

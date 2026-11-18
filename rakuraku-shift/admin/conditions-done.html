@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>勤務条件登録完了 | らくらくシフト登録</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="menu.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト</a>
+    <a class="nav on" href="menu.html">管理者メニュー</a><div class="grp">従業員管理</div><a class="nav" href="employee-list.html">従業員一覧（変更・削除）</a><a class="nav" href="employee-new.html">従業員登録</a><div class="grp">シフト作成</div><a class="nav" href="conditions.html">勤務条件設定</a><a class="nav" href="shift-generate.html">シフト自動作成</a><a class="nav" href="reminder-result.html">出勤催促メールの結果確認</a><a class="nav" href="approval.html">催促承認</a><div class="grp">シフト管理</div><a class="nav" href="shift-view.html">シフト確認</a><a class="nav" href="shift-edit.html">シフト修正</a><a class="nav" href="shift-confirm.html">シフト確定</a><a class="nav" href="shift-export.html">シフト表出力</a>
+    <div class="who">
+      <div class="cc">会社コード <code>K7M4QX</code><a class="cc-copy" href="#copied" title="会社コードをコピー">コピー</a><span class="alt cc-msg" id="copied" role="status">コピーしました</span></div>
+      <b>木戸 愛翔 さん</b><a href="select.html">画面を切り替える</a>　<a href="../login.html#loggedout">ログアウト</a></div>
+  </aside>
+  <main class="main">
+    <div class="crumb"><span class="uc">UC 管理者メニュー・ログイン</span></div>
+    <div class="head"><div><h1>管理者メニュー</h1><p class="sub">2026年11月分のシフト作成の進み具合</p></div></div>
+
+<div class="alt note ng" id="err-logout" role="alert">ログアウトできませんでした。もう一度お試しください。</div>
+
+<ol class="steps">
+  <li class="done"><b>1. 勤務条件設定</b>設定済み</li>
+  <li class="done"><b>2. 勤務希望の受付</b>9/9名が登録済み</li>
+  <li class="done"><b>3. シフト自動作成</b>実行済み</li>
+  <li class="now"><b>4. 催促・修正</b>承認待ち2件</li>
+  <li><b>5. 確定・出力</b></li>
+</ol>
+<div class="kpis">
+  <div><div class="v">9<small> /9名</small></div><div class="l">勤務希望の登録状況</div></div>
+  <div><div class="v">10/28<small>（水）</small></div><div class="l">勤務希望の提出期限</div></div>
+  <div class="bad"><div class="v"><a class="lk" href="shift-edit.html">13<small> 枠</small> ›</a></div><div class="l">人数が足りない枠（下書き）</div></div>
+  <div class="bad"><div class="v">2<small> 件</small></div><div class="l">承認待ちの催促</div></div>
+</div>
+
+<div class="menu-cols">
+  <section class="panel comp">
+    <h2 style="font-size:.98rem;margin-bottom:8px">シフトの完成状況</h2>
+    <p class="muted">ステータス <span class="badge warn">下書き（作成中）</span></p>
+    <p class="pct" style="margin-top:10px">78<small>%</small><small style="color:var(--ink)">完成度</small></p>
+    <div class="bar-out"><i style="width:78%"></i></div>
+    <p class="muted" style="font-size:.8rem">全60枠のうち47枠が最低人数を満たしています。</p>
+    <h3 class="ng">できていない枠（13枠）</h3>
+    <ul class="gaps">
+      <li>・11/1（日） <span class="slot l">遅番</span></li>
+      <li>・11/2（月） <span class="slot l">遅番</span></li>
+      <li>・11/3（火） <span class="slot l">遅番</span></li>
+      <li>・11/7（土） <span class="slot l">遅番</span></li>
+      <li class="muted">ほか9枠</li>
+    </ul>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><h2 style="font-size:.98rem">日別シフト</h2>
+      <span class="datepick"><a href="#" aria-label="前日">◀</a>2026/11/01<a href="#" aria-label="翌日">▶</a></span></div>
+    <div class="gantt">
+      <div class="row axis"><div></div><div class="track"><span style="left:0%;transform:none">9:00</span><span style="left:23.1%">12:00</span><span style="left:46.2%">15:00</span><span style="left:69.2%">18:00</span><span style="left:100%;transform:translateX(-100%)">22:00</span></div></div>
+      <div class="row"><div class="nm">高橋 悠</div><div class="track"><span class="bar e" style="left:0%;width:61.5%">早番 9:00–17:00</span></div></div>
+      <div class="row"><div class="nm">佐藤 健</div><div class="track"><span class="bar e" style="left:0%;width:61.5%">早番 9:00–17:00</span></div></div>
+      <div class="row"><div class="nm">鈴木 結衣</div><div class="track"><span class="bar e" style="left:0%;width:61.5%">早番 9:00–17:00</span></div></div>
+      <div class="row"><div class="nm">田中 蓮</div><div class="track"><span class="bar l" style="left:38.5%;width:61.5%">遅番 14:00–22:00</span></div></div>
+      <div class="row"><div class="nm">伊藤 美咲</div><div class="track"><span class="bar l" style="left:38.5%;width:61.5%">遅番 14:00–22:00</span></div></div>
+      <div class="row"><div class="nm">山本 大和</div><div class="track"><span class="bar l" style="left:38.5%;width:61.5%">遅番 14:00–22:00</span></div></div>
+      <div class="row lack"><div class="nm">人数不足</div><div class="track"><span class="bar short" style="left:38.5%;width:61.5%">遅番 1名不足（最低4名/現在3名）</span></div></div>
+    </div>
+    <div class="gantt-legend"><span><span class="slot e">早</span> 早番 9:00–17:00</span><span><span class="slot l">遅</span> 遅番 14:00–22:00</span><span><i style="background:var(--danger);border:1px solid var(--danger-t)"></i>最低人数に足りない時間帯</span></div>
+  </section>
+</div>
+  </main>
+</div>
+
+<div class="modal show" role="dialog" aria-modal="true" aria-labelledby="done-title"><div class="box alert"><div class="ic">✓</div><h2 id="done-title">勤務条件を登録しました</h2><p class="sub">勤務希望の受付後、シフト自動作成でこの条件が使われます。</p><table class="kvt"><tbody><tr><th>対象期間</th><td>2026年11月</td></tr><tr><th>勤務希望の提出期限</th><td>2026/10/28（水）</td></tr><tr><th>出勤催促メールの返信期限</th><td>2026/10/31（土）</td></tr><tr><th>例外日</th><td>1件</td></tr><tr><th>連勤上限</th><td>6日</td></tr></tbody></table><div class="form-actions"><a class="btn primary" href="menu.html">OK</a></div></div></div>
+</body>
+</html>

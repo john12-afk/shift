@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>出勤催促 | らくらくシフト登録</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="m-top"><a class="brand" href="menu.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト</a><div class="links"><a href="../login.html#loggedout">ログアウト</a></div></div>
+<nav class="m-nav"><a href="menu.html">メニュー</a><a href="request.html">勤務希望</a><a href="shift.html">シフト</a><a class="on" href="offer.html">出勤催促</a></nav>
+<main class="m-main">
+
+<h1>出勤催促</h1>
+<p class="muted" style="margin-bottom:12px">人数が足りない日に、返信期限内に出勤するかを答えてください。</p>
+<div class="alt note" id="none" role="status">回答待ちの出勤のお願いはありません。</div>
+<div class="alt note ng" id="err-expired" role="alert">返信期限を過ぎた催促があるため、回答できませんでした。一覧を更新しました。</div>
+<div class="alt note ng" id="err-save" role="alert">回答を記録できませんでした。もう一度お試しください。</div>
+
+<div class="panel-head" style="margin-bottom:10px"><div class="btn-row"><a class="btn" href="#">すべて出勤する</a><a class="btn" href="#">すべて出勤しない</a></div><span class="muted">回答済み 2/3件</span></div>
+
+<section class="panel offer" style="margin-bottom:10px">
+  <div><span class="d">11/1（日）</span> <span class="slot l">遅番</span> <span class="muted">14:00–22:00</span>
+    <p class="muted">勤務時間・不足人数：遅番 14:00–22:00／不足 1名　返信期限：10/31（土）18:00</p></div>
+  <div class="inline"><div class="opts"><label><input type="radio" name="o1" checked> 出勤する</label><label><input type="radio" name="o1"> 出勤しない</label></div><span class="badge">回答前</span></div>
+</section>
+<section class="panel offer" style="margin-bottom:10px">
+  <div><span class="d">11/2（月）</span> <span class="slot l">遅番</span> <span class="muted">14:00–22:00</span>
+    <p class="muted">勤務時間・不足人数：遅番 14:00–22:00／不足 2名　返信期限：10/31（土）18:00</p></div>
+  <div class="inline"><div class="opts"><label><input type="radio" name="o2"> 出勤する</label><label><input type="radio" name="o2" checked> 出勤しない</label></div><span class="badge">回答前</span></div>
+</section>
+<section class="panel offer" style="margin-bottom:10px">
+  <div><span class="d">11/7（土）</span> <span class="slot l">遅番</span> <span class="muted">14:00–22:00</span>
+    <p class="muted">勤務時間・不足人数：遅番 14:00–22:00／不足 1名　返信期限：10/31（土）18:00</p></div>
+  <div class="inline"><div class="opts"><label><input type="radio" name="o3"> 出勤する</label><label><input type="radio" name="o3"> 出勤しない</label></div><span class="badge">未回答</span></div>
+</section>
+<a class="btn primary lg" style="display:block;text-align:center" href="offer-done.html">回答する</a>
+<p class="muted" style="margin-top:8px;font-size:.8rem">返信期限切れ・確定済みの枠の催促は一覧に表示しません。</p>
+
+<div class="protonote no-print"><b>代替フローの表示確認（プロトタイプ用）</b><br><a href="#none">回答待ちの催促がない</a><a href="#err-expired">返信期限を過ぎた催促を選んだ</a><a href="#err-save">回答の記録に失敗</a><br><a href="#" style="margin-top:4px;display:inline-block">表示を閉じる</a></div>
+</main>
+</body>
+</html>

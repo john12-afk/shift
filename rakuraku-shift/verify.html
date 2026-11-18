@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>本人確認 | らくらくシフト登録</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="m-top"><a class="brand" href="login.html"><span class="mark"><i></i><i></i><i></i></span>らくらくシフト登録</a></div>
+<main class="center-shell">
+
+<h1 style="margin-bottom:6px">本人確認</h1>
+<p class="muted" style="margin-bottom:18px">登録しているメールアドレスに、ワンタイムパスワードを送ります。</p>
+<div class="alt note ng" id="err-mail" role="alert">メールアドレスを正しい形式で入力してください</div>
+
+<section class="panel">
+  <div class="field"><label for="m">メールアドレス</label><input id="m" type="email" placeholder="例：name@example.com"></div>
+  <div class="form-actions" style="margin-top:16px"><a class="btn" href="login.html">ログイン画面へ戻る</a><a class="btn primary" href="verify-otp.html">確認</a></div>
+</section>
+<div class="protonote no-print"><b>代替フローの表示確認（プロトタイプ用）</b><br><a href="#err-mail">未入力・形式が違う</a><br><a href="#" style="margin-top:4px;display:inline-block">表示を閉じる</a></div>
+</main>
+</body>
+</html>
